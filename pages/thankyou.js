@@ -1,4 +1,4 @@
-import React, { Fragment, useContext } from 'react';
+import React, { useContext } from 'react';
 import { LanguageContext } from '../contexts/LanguageContext';
 export default function ThankYou() {
 	const { language, currLang } = useContext(LanguageContext);

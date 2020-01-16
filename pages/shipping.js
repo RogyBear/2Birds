@@ -1,6 +1,5 @@
 import React, { Fragment, useContext } from 'react';
 import ShippingInfo from '../components/ShippingInfo';
-import ConfirmationInfo from '../components/ConfirmationInfo';
 import { CartContext } from '../contexts/CartContext';
 import { LanguageContext } from '../contexts/LanguageContext';
 
