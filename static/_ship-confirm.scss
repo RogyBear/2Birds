@@ -1,0 +1,31 @@
+.confirmation {
+	display: flex;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	font-family: 'Calibri', 'sans-serif';
+	height: 50vh;
+	margin: {
+		top: 70px;
+		bottom: 100px;
+	}
+	&__title {
+		font-size: 5rem;
+		color: #ffacba;
+		margin: {
+			bottom: 30px;
+		}
+	}
+	&__order {
+		font-size: 1.8rem;
+		&__line-three {
+		}
+	}
+	&__line-one {
+		font-size: 1.8rem;
+	}
+	&__line-two {
+		font-size: 1.8rem;
+	}
+}

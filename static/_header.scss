@@ -1,0 +1,98 @@
+.bg-img {
+	background: url('/static/img/foto_na_fon.png') no-repeat;
+	background-size: cover;
+	position: relative;
+	z-index: -1;
+	width: 100%;
+	height: 310px;
+
+	&__birds {
+		position: absolute;
+		top: 35%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		height: 30%;
+	}
+	&__title {
+		&__name {
+			font-family: 'Aphrosine';
+			color: #9d76af;
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			font-size: 11rem;
+			height: 23%;
+			top: 53%;
+			position: absolute;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+		&__text {
+			position: absolute;
+			display: inline-block;
+			top: 86%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			font-size: 2rem;
+			color: #888888;
+			font-family: 'Calibril';
+		}
+	}
+}
+
+//////////////////////////////////////////////////////////////////////////
+//Media Queries
+//////////////////////////////////////////////////////////////////////////
+
+@media screen and (max-width: 1750px) {
+	.bg-img__title__name {
+		font-size: 9rem;
+	}
+}
+
+@media screen and (max-width: 550px) {
+	.bg-img {
+		height: 28rem;
+		&__birds {
+			height: 26%;
+		}
+		&__title {
+			&__name {
+				font-size: 8rem;
+			}
+		}
+	}
+}
+@media screen and (max-width: 500px) {
+	.bg-img {
+		height: 25rem;
+		&__title {
+			&__name {
+				font-size: 7rem;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 445px) {
+	.bg-img {
+		height: 20rem;
+
+		&__title {
+			&__name {
+				font-size: 6rem;
+			}
+		}
+	}
+}
+@media screen and (max-width: 360px) {
+	.bg-img {
+		height: 18rem;
+
+		&__title {
+			&__name {
+				font-size: 5rem;
+			}
+		}
+	}
+}

@@ -1,0 +1,43 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+//HTML FONT RESET
+
+html {
+	font-size: 62.5%;
+}
+.container {
+	height: 100vh;
+}
+body {
+	background: #fbfbfb;
+}
+//FONTS
+
+@font-face {
+	font-family: 'Candra';
+	src: url('/static/fonts/Candara.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Candarai';
+	src: url('/static/fonts/Candarai.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Calibril';
+	src: url('/static/fonts/calibril.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Calibrili';
+	src: url('/static/fonts/calibrili.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Aphrosine';
+	src: url('/static/fonts/Aphrosine.otf') format('truetype');
+}
+@font-face {
+	font-family: 'Berry';
+	src: url('/static/fonts/VeryBerryPro-Regular.ttf') format('truetype');
+}

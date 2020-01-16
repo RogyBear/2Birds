@@ -1,0 +1,19 @@
+.pagination {
+	display: flex;
+	justify-content: center;
+
+	&__item {
+		height: 4rem;
+		width: 4rem;
+		background: #9d76af;
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		cursor: pointer;
+		&__link {
+			text-decoration: none;
+			color: white;
+		}
+	}
+}

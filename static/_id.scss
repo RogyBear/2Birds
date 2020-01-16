@@ -1,0 +1,218 @@
+.product-description {
+	display: flex;
+	justify-content: space-between;
+	width: 1100px;
+	margin: 90px auto 150px auto;
+	&__img {
+		height: 450px;
+		width: 450px;
+	}
+	&__information {
+		display: flex;
+		flex-direction: column;
+		font-family: 'Calibril';
+		color: #968f89;
+		font-size: 1.5rem;
+		width: 55rem;
+		&__title {
+			font-size: 3rem;
+			font-family: 'Calibrili';
+			color: #acbed4;
+			margin-bottom: 1rem;
+		}
+		&__selection {
+			font-family: inherit;
+			padding: 1rem;
+			width: 100%;
+			margin-bottom: 1rem;
+			font-size: 1.8rem;
+			height: 45px;
+			&:focus {
+				outline: none;
+			}
+		}
+		&__description {
+			&__main-text {
+				margin-bottom: 1rem;
+				&__attributes {
+					font-size: 2rem;
+				}
+			}
+			&__sub-text {
+				margin-bottom: 1rem;
+				&__attributes {
+					font-size: 2rem;
+				}
+			}
+		}
+		&__control {
+			display: flex;
+			justify-content: space-between;
+		}
+		&__selectors {
+			width: 70%;
+		}
+		&__quantity {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			border: 1px solid #968f89;
+			height: 50px;
+			font-size: 1.8rem;
+			button {
+				border: none;
+				background-color: transparent;
+				color: transparent;
+				position: relative;
+			}
+			&__decrease {
+				position: relative;
+				align-self: stretch;
+				flex: 1 1 0;
+				cursor: pointer;
+				&:focus {
+					outline: none;
+				}
+				&::after {
+					content: "\2212";
+					position: absolute;
+					height: 15px;
+					width: 15px;
+					color: #968f89;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+				}
+			}
+			&__number {
+				width: 10px;
+				display: flex;
+				justify-content: center;
+			}
+			&__increase {
+				position: relative;
+				align-self: stretch;
+				flex: 1 1 0;
+				cursor: pointer;
+				&:focus {
+					outline: none;
+				}
+				&::before {
+					content: '\002B';
+					position: absolute;
+					height: 15px;
+					width: 15px;
+					color: #968f89;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+				}
+			}
+		}
+		&__add-item {
+			font-size: 2.4rem;
+			font-family: inherit;
+			font-weight: bold;
+			border: none;
+			flex: 1 1 0;
+			margin-left: 1rem;
+			cursor: pointer;
+			background: #acbed4;
+			color: #fff;
+		}
+	}
+}
+.slider-id-page {
+	&__img {
+		height: 400px;
+		width: 400px;
+	}
+}
+// .slick-track {
+// 	width: 400px !important;
+// }
+/////////////////////////////
+// Media Queries
+/////////////////////////////
+
+@media screen and (max-width: 1150px) {
+	.product-description {
+		width: 1000px;
+	}
+}
+
+@media screen and (max-width: 1050px) {
+	.product-description {
+		flex-direction: column;
+		align-items: center;
+		width: auto;
+		&__information {
+			margin-top: 12rem;
+			align-items: center;
+			&__description {
+				text-align: center;
+			}
+		}
+		.slick-thumb {
+			justify-content: center;
+		}
+	}
+}
+
+@media screen and (max-width: 550px) {
+	.product-description {
+		&__information {
+			width: 100%;
+		}
+	}
+}
+@media screen and (max-width: 550px) {
+	.product-description {
+		&__information {
+			&__selectors {
+				width: 85%;
+			}
+		}
+	}
+	.slick-slider {
+		width: 400px !important;
+	}
+}
+@media screen and (max-width: 420px) {
+	.slick-slider {
+		width: 300px !important;
+	}
+	.slider-id-page {
+		display: flex !important;
+		justify-content: center;
+		//
+		&__img {
+			height: 300px;
+			width: 300px;
+		}
+	}
+	.slick-dots {
+		left: 50%;
+		transform: translateX(-48%);
+	}
+	.product-description {
+		&__information {
+			&__description {
+				padding: 0 1rem;
+			}
+			&__selectors {
+				width: 90%;
+			}
+			width: 100%;
+		}
+	}
+}
+@media screen and (max-width: 365px) {
+	.product-description {
+		&__information {
+			&__add-item {
+				font-size: 1.8rem;
+			}
+		}
+	}
+}
