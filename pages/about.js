@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import About from '../components/about';
+import About from '../components/About';
 export default class about extends Component {
 	render() {
 		return (
