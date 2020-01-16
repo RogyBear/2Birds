@@ -1,11 +1,10 @@
 import React from 'react';
 import Head from 'next/head';
 import App from 'next/app';
-import Link from 'next/link';
 
-import Header from '../components/header';
-import Footer from '../components/footer';
-import Nav from '../components/nav';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import Nav from '../components/Nav';
 import '../static/main.scss';
 import { PageTransition } from 'next-page-transitions';
 import { Helmet } from 'react-helmet';
@@ -42,10 +41,9 @@ class MyApp extends App {
 				<LanguageProvider>
 					<CartProvider>
 						<ShippingProvider>
-							
 							<Header />
 							<Nav />
-							<Logo/>
+							<Logo />
 							<PageTransition timeout={500} classNames="page-transition">
 								<Component {...pageProps} />
 							</PageTransition>
