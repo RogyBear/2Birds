@@ -8,17 +8,17 @@
 		}
 	],
 	"env": {
-		"CMSLINK": "@CMSLINK",
-		"CMSLINKORDERS": "@CMSLINKORDERS",
-		"CMSLINKEMAILS": "@CMSLINKEMAILS",
-		"CMSLINKSTORES": "@CMSLINKORDERS"
+		"CMSLINK": "@cmslink",
+		"CMSLINKORDERS": "@cmslinkorders",
+		"CMSLINKEMAILS": "@cmslinkemails",
+		"CMSLINKSTORES": "@cmslinkstores"
     },
     "build": {
         "env": {
-            "CMSLINK": "@CMSLINK",
-            "CMSLINKORDERS": "@CMSLINKORDERS",
-            "CMSLINKEMAILS": "@CMSLINKEMAILS",
-            "CMSLINKSTORES": "@CMSLINKORDERS"
+            "CMSLINK": "@cmslink",
+            "CMSLINKORDERS": "@cmslinkorders",
+            "CMSLINKEMAILS": "@cmslinkemails",
+            "CMSLINKSTORES": "@cmslinkstores"
         }
     }
 }
