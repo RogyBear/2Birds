@@ -13,14 +13,13 @@ module.exports = withCSS(
 						limit: 100000
 					}
 				}
-				// env: {
-				// 	CMSLINK: process.env.CMSLINK,
-				// 	CMSLINKORDERS: process.env.CMSLINKORDERS,
-				// 	CMSLINKEMAILS: process.env.CMSLINKEMAILS,
-				// 	CMSLINKSTORES: process.env.CMSLINKSTORES
-				// }
 			});
-
+			// env: {
+			// 	CMSLINK: process.env.CMSLINK,
+			// 	CMSLINKORDERS: process.env.CMSLINKORDERS,
+			// 	CMSLINKEMAILS: process.env.CMSLINKEMAILS,
+			// 	CMSLINKSTORES: process.env.CMSLINKSTORES
+			// }
 			// config.node = {
 			// 	fs: 'empty'
 			// };
@@ -32,6 +31,12 @@ module.exports = withCSS(
 
 			// config.plugins.push(new webpack.DefinePlugin(env));
 			return config;
+		},
+		env: {
+			CMSLINK: process.env.CMSLINK,
+			CMSLINKORDERS: process.env.CMSLINKORDERS,
+			CMSLINKEMAILS: process.env.CMSLINKEMAILS,
+			CMSLINKSTORES: process.env.CMSLINKSTORES
 		}
 	})
 );
