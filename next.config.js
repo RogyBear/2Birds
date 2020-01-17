@@ -12,13 +12,13 @@ module.exports = withCSS(
 					options: {
 						limit: 100000
 					}
-				},
-				env: {
-					CMSLINK: process.env.CMSLINK,
-					CMSLINKORDERS: process.env.CMSLINKORDERS,
-					CMSLINKEMAILS: process.env.CMSLINKEMAILS,
-					CMSLINKSTORES: process.env.CMSLINKSTORES
 				}
+				// env: {
+				// 	CMSLINK: process.env.CMSLINK,
+				// 	CMSLINKORDERS: process.env.CMSLINKORDERS,
+				// 	CMSLINKEMAILS: process.env.CMSLINKEMAILS,
+				// 	CMSLINKSTORES: process.env.CMSLINKSTORES
+				// }
 			});
 
 			// config.node = {
