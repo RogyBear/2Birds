@@ -2,7 +2,7 @@
 	display: flex;
 	justify-content: flex-end;
 	box-shadow: 0px -20px 23px -21px rgba(0, 0, 0, 0.10);
-	font-family: 'Candara', 'sans-serif';
+	font-family: 'Candra', 'sans-serif';
 	height: 90px;
 	&__list {
 		display: inherit;
@@ -55,6 +55,7 @@
 			text-transform: uppercase;
 			text-decoration: none;
 			font-size: 2.4rem;
+
 			position: relative;
 			&::before {
 				content: '';

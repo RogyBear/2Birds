@@ -62,9 +62,10 @@
 			margin-top: 50px;
 			margin-left: 80px;
 			flex-grow: 2;
-			height: 100%;
+
 			label {
 				font-size: 2rem;
+				font-family: 'Candra';
 			}
 			input {
 				padding: 1rem 1rem;
@@ -81,6 +82,8 @@
 				width: 100%;
 				height: 6rem;
 				resize: none;
+				-webkit-appearance: textfield;
+				-webkit-appearance: textarea;
 			}
 			button {
 				align-self: center;
@@ -92,6 +95,7 @@
 				color: #fff;
 				font-size: 2rem;
 				cursor: pointer;
+				-webkit-appearance: button;
 			}
 			display: flex;
 			flex-direction: column;
@@ -139,7 +143,7 @@
 
 @media screen and (max-width: 675px) {
 	.postcard {
-		margin: 13rem auto;
+		height: 66rem;
 		background: transparent;
 		box-shadow: none;
 		&__border {
@@ -160,6 +164,11 @@
 		}
 
 		&__data {
+			position: relative;
+			top: inherit;
+			left: inherit;
+			right: inherit;
+			bottom: inherit;
 			padding: 0;
 			flex-direction: column;
 			&__left {
