@@ -26,17 +26,11 @@ export default function ShippingInfo() {
 		const parsedCart = JSON.parse(sessionStorage.getItem('cart'));
 		const data = { contact, parsedCart };
 		const email = {};
-
-		axios
-			.post(`${process.env.CMSLINKORDERS}`, data, {
-				headers: {
-					'Content-Type': 'application/json'
-				}
-			})
-			.then((res) => {
-				email.to = res.data.emailAddress;
-				email.subject = `2BirdsWedding: Номер заказа / Order Confirmation: ${res.data.order_number}`;
-				email.text = `Мы получили Ваш заказ! Мы свяжемся с Вами в течении 24 часа. Спасибо! 
+		console.log(data)
+		axios.post(`${process.env.CMSLINKORDERS}`, data).then((res) => {
+			email.to = res.data.emailAddress;
+			email.subject = `2BirdsWedding: Номер заказа / Order Confirmation: ${res.data.order_number}`;
+			email.text = `Мы получили Ваш заказ! Мы свяжемся с Вами в течении 24 часа. Спасибо! 
 				<br> 
 				С уважением, 
 				<br>
@@ -51,15 +45,15 @@ export default function ShippingInfo() {
 				<br>
 				Dasha`;
 
-				//redirect to thank you page
+			//redirect to thank you page
 
-				router.push({ pathname: '/confirmation', query: { orderNumber: res.data.order_number } });
+			router.push({ pathname: '/confirmation', query: { orderNumber: res.data.order_number } });
 
-				//clear session storage
+			//clear session storage
 
-				setCart([]);
-				return axios.post(`${process.env.CMSLINKEMAILS}`, email, res);
-			});
+			setCart([]);
+			return axios.post(`${process.env.CMSLINKEMAILS}`, email);
+		});
 	};
 
 	//Handles iteration of items in the session storage cart

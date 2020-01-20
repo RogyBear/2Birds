@@ -1,0 +1,515 @@
+.logo {
+	position: fixed;
+	z-index: 5;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	&__img {
+		opacity: 0;
+	}
+
+	&__purple-bird,
+	&__pink-bird {
+		position: absolute;
+		top: 50%;
+	}
+	&__purple-bird {
+		left: -10%;
+		&__body {
+			height: 12rem;
+		}
+		&__wing {
+			position: absolute;
+			top: -5%;
+			left: 8%;
+			transform: translate(-50%, -50%);
+			height: 6rem;
+			transform-origin: bottom center;
+		}
+	}
+	&__pink-bird {
+		right: -10%;
+		&__body {
+			height: 9rem;
+		}
+		&__wing {
+			position: absolute;
+			top: -32%;
+			right: 25%;
+			transform: translate(-50%, -50%);
+			height: 6rem;
+			transform-origin: bottom center;
+		}
+	}
+}
+
+@keyframes logo-fade {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes background-fade {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+@keyframes wing-flap {
+	0% {
+		transform: scale(1, 1);
+	}
+
+	100% {
+		transform: scale(1, -1);
+	}
+}
+
+@keyframes bird-fly-right {
+	30% {
+		top: 24%;
+	}
+
+	100% {
+		left: 42%;
+		top: 12%;
+	}
+}
+@keyframes bird-fly-left {
+	30% {
+		top: 24%;
+	}
+
+	100% {
+		right: 42%;
+		top: 12%;
+	}
+}
+
+//////////////////////////
+//Media Queries For Logo
+//////////////////////////
+
+@media screen and (max-width: 1900px) {
+	@keyframes bird-fly-right {
+		30% {
+			top: 20%;
+		}
+
+		100% {
+			left: 42%;
+			top: 10%;
+		}
+	}
+	@keyframes bird-fly-left {
+		30% {
+			top: 24%;
+		}
+
+		100% {
+			right: 42%;
+			top: 10%;
+		}
+	}
+}
+@media screen and (max-width: 1750px) {
+	@keyframes bird-fly-right {
+		30% {
+			top: 20%;
+		}
+
+		100% {
+			left: 41%;
+			top: 10%;
+		}
+	}
+	@keyframes bird-fly-left {
+		30% {
+			top: 24%;
+		}
+
+		100% {
+			right: 41%;
+			top: 10%;
+		}
+	}
+}
+@media screen and (max-width: 1500px) {
+	@keyframes bird-fly-right {
+		25% {
+			top: 20%;
+		}
+
+		100% {
+			left: 40%;
+			top: 9%;
+		}
+	}
+	@keyframes bird-fly-left {
+		25% {
+			top: 24%;
+		}
+
+		100% {
+			right: 40%;
+			top: 9%;
+		}
+	}
+}
+@media screen and (max-width: 1400px) {
+	@keyframes bird-fly-right {
+		25% {
+			top: 20%;
+		}
+
+		100% {
+			left: 39%;
+			top: 9%;
+		}
+	}
+	@keyframes bird-fly-left {
+		25% {
+			top: 24%;
+		}
+
+		100% {
+			right: 39%;
+			top: 9%;
+		}
+	}
+}
+
+@media screen and (max-width: 1300px) {
+	.logo {
+		&__purple-bird {
+			left: -20%;
+		}
+		&__pink-bird {
+			right: -20%;
+		}
+	}
+
+	@keyframes bird-fly-right {
+		20% {
+			top: 20%;
+		}
+
+		100% {
+			left: 38%;
+			top: 9%;
+		}
+	}
+	@keyframes bird-fly-left {
+		20% {
+			top: 24%;
+		}
+
+		100% {
+			right: 38%;
+			top: 9%;
+		}
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	@keyframes bird-fly-right {
+		20% {
+			top: 20%;
+		}
+
+		100% {
+			left: 37%;
+			top: 9%;
+		}
+	}
+	@keyframes bird-fly-left {
+		20% {
+			top: 24%;
+		}
+
+		100% {
+			right: 37%;
+			top: 9%;
+		}
+	}
+}
+
+@media screen and (max-width: 1050px) {
+	@keyframes bird-fly-right {
+		20% {
+			top: 20%;
+		}
+
+		100% {
+			left: 35%;
+			top: 9%;
+		}
+	}
+	@keyframes bird-fly-left {
+		20% {
+			top: 24%;
+		}
+
+		100% {
+			right: 35%;
+			top: 9%;
+		}
+	}
+}
+
+@media screen and (max-width: 1050px) {
+	@keyframes bird-fly-right {
+		20% {
+			top: 20%;
+		}
+
+		100% {
+			left: 35%;
+			top: 9%;
+		}
+	}
+	@keyframes bird-fly-left {
+		20% {
+			top: 24%;
+		}
+
+		100% {
+			right: 35%;
+			top: 9%;
+		}
+	}
+}
+
+@media screen and (max-width: 750px) {
+	@keyframes bird-fly-right {
+		20% {
+			top: 20%;
+		}
+
+		100% {
+			left: 33%;
+			top: 9%;
+		}
+	}
+	@keyframes bird-fly-left {
+		20% {
+			top: 24%;
+		}
+
+		100% {
+			right: 33%;
+			top: 9%;
+		}
+	}
+}
+@media screen and (max-width: 900px) {
+	.logo {
+		&__purple-bird {
+			&__body {
+				height: 10rem;
+			}
+			&__wing {
+				top: -5%;
+				left: 8%;
+				height: 4.5rem;
+			}
+		}
+		&__pink-bird {
+			&__body {
+				height: 7.3rem;
+			}
+			&__wing {
+				top: -43%;
+				right: 25%;
+				height: 4.8rem;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 650px) {
+	.logo {
+		&__img {
+			height: 40% !important;
+		}
+	}
+	@keyframes bird-fly-right {
+		20% {
+			top: 20%;
+		}
+
+		100% {
+			left: 31%;
+			top: 9%;
+		}
+	}
+	@keyframes bird-fly-left {
+		20% {
+			top: 24%;
+		}
+
+		100% {
+			right: 31%;
+			top: 9%;
+		}
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.logo {
+		&__purple-bird {
+			left: -20%;
+		}
+		&__pink-bird {
+			right: -20%;
+		}
+	}
+}
+
+@media screen and (max-width: 550px) {
+	.logo {
+		&__img {
+			height: 30% !important;
+		}
+		&__purple-bird {
+			left: -30%;
+			&__body {
+				height: 8rem;
+			}
+			&__wing {
+				top: -5%;
+				left: 8%;
+				height: 4rem;
+			}
+		}
+		&__pink-bird {
+			right: -30%;
+			&__body {
+				height: 5.9rem;
+			}
+			&__wing {
+				top: -30%;
+				right: 25%;
+				height: 3.9rem;
+			}
+		}
+	}
+
+	@keyframes bird-fly-right {
+		20% {
+			top: 20%;
+		}
+
+		100% {
+			left: 28%;
+			top: 18%;
+		}
+	}
+	@keyframes bird-fly-left {
+		20% {
+			top: 24%;
+		}
+
+		100% {
+			right: 28%;
+			top: 18%;
+		}
+	}
+}
+
+@media screen and (max-width: 420px) {
+	.logo {
+		&__img {
+			height: 23% !important;
+		}
+	}
+	@keyframes bird-fly-right {
+		20% {
+			top: 20%;
+		}
+
+		100% {
+			left: 21%;
+			top: 18%;
+		}
+	}
+	@keyframes bird-fly-left {
+		20% {
+			top: 20%;
+		}
+
+		100% {
+			right: 21%;
+			top: 18%;
+		}
+	}
+}
+
+/////////////////////////////////////////
+//Media Queries For Height Birds
+/////////////////////////////////////////
+
+@media screen and (max-height: 890px) {
+	.logo {
+		&__img {
+			position: absolute;
+			top: 60%;
+			transform: translateY(-50%);
+		}
+	}
+}
+
+@media screen and (max-height: 670px) {
+	.logo {
+		&__img {
+			height: 50%;
+			position: absolute;
+			top: 72%;
+			transform: translateY(-50%);
+		}
+	}
+}
+//////////////////////////
+//Media Queries For Logo
+//////////////////////////
+
+@media screen and (max-width: 1100px) {
+	.logo {
+		&__img {
+			height: 50%;
+		}
+	}
+}
+
+@media screen and (max-width: 580px) {
+	.logo {
+		&__img {
+			height: 40%;
+		}
+	}
+}
+@media screen and (max-width: 450px) {
+	.logo {
+		&__img {
+			height: 30%;
+		}
+	}
+}
+@media screen and (max-width: 380px) {
+	.logo {
+		&__img {
+			height: 20%;
+		}
+	}
+}

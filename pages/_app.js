@@ -1,13 +1,11 @@
 import React from 'react';
 import Head from 'next/head';
 import App from 'next/app';
-
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Nav from '../components/Nav';
 import '../static/main.scss';
 import { PageTransition } from 'next-page-transitions';
-import { Helmet } from 'react-helmet';
 import { CartProvider } from '../contexts/CartContext';
 import { ShippingProvider } from '../contexts/ShippingContext';
 import { LanguageProvider } from '../contexts/LanguageContext';
@@ -25,7 +23,9 @@ class MyApp extends App {
 
 		return (
 			<div className="container">
-				<Helmet>
+				<Head>
+					<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+					<meta charset="UTF-8" />
 					<link
 						rel="stylesheet"
 						type="text/css"
@@ -37,7 +37,7 @@ class MyApp extends App {
 						type="text/css"
 						href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
 					/>
-				</Helmet>
+				</Head>
 				<LanguageProvider>
 					<CartProvider>
 						<ShippingProvider>

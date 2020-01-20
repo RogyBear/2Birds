@@ -1,12 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Router, { useRouter } from 'next/router';
-export default function Logo() {
+
+function Logo() {
 	let bgAnimation;
 	let logoAnimation;
 	let birdFlyRight;
 	let birdFlyLeft;
 	let wing;
 	const [ animation, setAnimation ] = useState(false);
+
 	const router = useRouter();
 	const handleAnimation = () => {
 		setTimeout(() => {
@@ -26,9 +28,9 @@ export default function Logo() {
 			animationName: 'logo-fade',
 			animationDuration: '3s',
 			animationDelay: '1s',
-			animationFillMode: 'forwards',
-
+			animationFillMode: 'forwards'
 		};
+
 		birdFlyRight = {
 			animationName: 'bird-fly-right',
 			animationDuration: '3s',
@@ -59,7 +61,7 @@ export default function Logo() {
 			className="logo"
 		>
 			<img className="logo__img" style={logoAnimation} src="../static/img/logo.png" />
-			<div className="logo__purple-bird " style={birdFlyRight}>
+			<div className="logo__purple-bird" style={birdFlyRight}>
 				<img className="logo__purple-bird__body" src="../static/img/ptichka1.png" />
 				<img className="logo__purple-bird__wing" style={wing} src="../static/img/krylo1.png" />
 			</div>
@@ -70,3 +72,5 @@ export default function Logo() {
 		</div>
 	);
 }
+
+export default Logo;

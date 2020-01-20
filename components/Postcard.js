@@ -91,7 +91,9 @@ export default function Postcard() {
 					<input name="to" required onChange={handleChange} type="text" />
 					{/* Message */}
 					<label>{currLang ? ru.message : en.message}:</label>
-					<textarea name="message" required onChange={handleChange} rows="4" />
+					<textarea name="message" required onChange={handleChange}>
+						{' '}
+					</textarea>
 					{/* Submit Button */}
 					<button type="submit">{currLang ? ru.send : en.send}</button>
 				</form>
