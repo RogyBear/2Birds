@@ -19,7 +19,7 @@ const cart = () => {
 							justifyContent: 'center',
 							alignItems: 'center',
 							height: '50vh',
-							fontFamily: 'Candara',
+							fontFamily: 'Candra',
 							color: '#888888',
 							fontWeight: '500'
 						}}
