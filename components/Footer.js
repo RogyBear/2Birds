@@ -26,7 +26,7 @@ const Footer = () => {
 					</svg>
 				</div>
 			</a>
-			<a href="">
+			<a href="tg://resolve?domain=@dash_ezh">
 				<div className="btn">
 					<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
 						<title>telegram</title>
