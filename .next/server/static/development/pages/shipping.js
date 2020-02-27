@@ -301,53 +301,60 @@ function ShippingInfo() {
       lineNumber: 100
     },
     __self: this
-  })), __jsx("h2", {
+  })), __jsx("div", {
+    className: "shipping-info__form__information",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 111
+    },
+    __self: this
+  }, "*", currLang ? ru.information : en.information), __jsx("h2", {
     className: "shipping-info__form__title",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 173
+      lineNumber: 174
     },
     __self: this
   }, currLang ? ru.confirmation : en.confirmation), __jsx("ul", {
     className: "shipping-info__form__cart shipping-info__form__cart__header",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 174
+      lineNumber: 175
     },
     __self: this
   }, __jsx("li", {
     className: "shipping-info__form__cart__item shipping-info__form__cart__header",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 175
+      lineNumber: 176
     },
     __self: this
   }, currLang ? ru.productImage : en.productImage), __jsx("li", {
     className: "shipping-info__form__cart__item shipping-info__form__cart__header",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 178
+      lineNumber: 179
     },
     __self: this
   }, currLang ? ru.productName : en.productName), __jsx("li", {
     className: "shipping-info__form__cart__item shipping-info__form__cart__header",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 181
+      lineNumber: 182
     },
     __self: this
   }, currLang ? ru.productAddOns : en.productAddOns), __jsx("li", {
     className: "shipping-info__form__cart__item shipping-info__form__cart__header",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 184
+      lineNumber: 185
     },
     __self: this
   }, currLang ? ru.productQuantity : en.productQuantity), __jsx("li", {
     className: "shipping-info__form__cart__item shipping-info__form__cart__header",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 188
+      lineNumber: 189
     },
     __self: this
   }, currLang ? ru.productTotal : en.productTotal)), _babel_runtime_corejs2_core_js_object_values__WEBPACK_IMPORTED_MODULE_0___default()(cartConfirm).map(el => {
@@ -356,14 +363,14 @@ function ShippingInfo() {
         className: "shipping-info__form__cart",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 195
+          lineNumber: 196
         },
         __self: this
       }, __jsx("li", {
         className: "shipping-info__form__cart__item",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 196
+          lineNumber: 197
         },
         __self: this
       }, __jsx("img", {
@@ -374,27 +381,27 @@ function ShippingInfo() {
         src: `${"http://localhost:1337"}${el.productImage}`,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 197
+          lineNumber: 198
         },
         __self: this
       })), __jsx("li", {
         className: "shipping-info__form__cart__item",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 202
+          lineNumber: 203
         },
         __self: this
       }, currLang ? el.productName.ru : el.productName.en), __jsx("li", {
         className: "shipping-info__form__cart__item",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 205
+          lineNumber: 206
         },
         __self: this
       }, __jsx("ul", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 206
+          lineNumber: 207
         },
         __self: this
       }, _babel_runtime_corejs2_core_js_object_values__WEBPACK_IMPORTED_MODULE_0___default()(el.productParams).map(element => {
@@ -402,7 +409,7 @@ function ShippingInfo() {
           key: element.id,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 208
+            lineNumber: 209
           },
           __self: this
         }, currLang ? element.ru : element.en);
@@ -410,14 +417,14 @@ function ShippingInfo() {
         className: "shipping-info__form__cart__item",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 212
+          lineNumber: 213
         },
         __self: this
       }, el.quantity), __jsx("li", {
         className: "shipping-info__form__cart__item",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 214
+          lineNumber: 215
         },
         __self: this
       }, el.productPrice * el.quantity, " p."));
@@ -429,7 +436,7 @@ function ShippingInfo() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 219
+      lineNumber: 220
     },
     __self: this
   }, __jsx("li", {
@@ -439,7 +446,7 @@ function ShippingInfo() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 220
+      lineNumber: 221
     },
     __self: this
   }, ' '), __jsx("li", {
@@ -449,14 +456,14 @@ function ShippingInfo() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 223
+      lineNumber: 224
     },
     __self: this
   }, ' '), __jsx("li", {
     className: "shipping-info__form__cart__item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 226
+      lineNumber: 227
     },
     __self: this
   }, __jsx("button", {
@@ -467,21 +474,21 @@ function ShippingInfo() {
     className: "shipping-info__form__button",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 227
+      lineNumber: 228
     },
     __self: this
   }, currLang ? ru.submit : en.submit)), __jsx("li", {
     className: "shipping-info__form__cart__item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 237
+      lineNumber: 238
     },
     __self: this
   }, currLang ? ru.orderTotal : en.orderTotal, ":"), __jsx("li", {
     className: "shipping-info__form__cart__item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 238
+      lineNumber: 239
     },
     __self: this
   }, totalStoredPrice, " p."))));
@@ -741,7 +748,8 @@ const LanguageProvider = props => {
       region: 'Область',
       index: 'Индекс',
       confirmation: 'Подтверждение товаров',
-      submit: 'Отправить'
+      submit: 'Отправить',
+      information: 'После отправки мы с Вами свяжемся для подтверждения заказа, адрес доставки, и способ оплаты.'
     },
     confirmation: {
       title: 'Информация о заказе',
@@ -832,7 +840,8 @@ const LanguageProvider = props => {
       region: 'State/Province/Region',
       index: 'Postal Code',
       confirmation: 'Order Review',
-      submit: 'Submit'
+      submit: 'Submit',
+      information: 'After you have submitted your order, we will be in contact with you to confirm your shipping address, order, and payment method.'
     },
     confirmation: {
       title: 'Confirmation Information',
@@ -867,7 +876,7 @@ const LanguageProvider = props => {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 195
+      lineNumber: 198
     },
     __self: undefined
   }, props.children);

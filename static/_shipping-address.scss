@@ -10,11 +10,20 @@
 		flex-direction: column;
 		width: 700px;
 		font-family: 'Candra', 'sans-serif';
+		&__information {
+			font-size: 2rem;
+			color: #ffacba;
+			font-style: italic;
+			text-align: center;
+		}
 		&__title {
 			font-size: 5rem;
 			color: rgb(255, 172, 186);
 			margin-bottom: 3rem;
 			text-align: center;
+			&:last-of-type {
+				margin-top: 3rem;
+			}
 		}
 		&__group {
 			&__input {

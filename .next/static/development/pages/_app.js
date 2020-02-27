@@ -1031,7 +1031,8 @@ var LanguageProvider = function LanguageProvider(props) {
       region: 'Область',
       index: 'Индекс',
       confirmation: 'Подтверждение товаров',
-      submit: 'Отправить'
+      submit: 'Отправить',
+      information: 'После отправки мы с Вами свяжемся для подтверждения заказа, адрес доставки, и способ оплаты.'
     },
     confirmation: {
       title: 'Информация о заказе',
@@ -1122,7 +1123,8 @@ var LanguageProvider = function LanguageProvider(props) {
       region: 'State/Province/Region',
       index: 'Postal Code',
       confirmation: 'Order Review',
-      submit: 'Submit'
+      submit: 'Submit',
+      information: 'After you have submitted your order, we will be in contact with you to confirm your shipping address, order, and payment method.'
     },
     confirmation: {
       title: 'Confirmation Information',
@@ -1158,7 +1160,7 @@ var LanguageProvider = function LanguageProvider(props) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 195
+      lineNumber: 198
     },
     __self: this
   }, props.children);

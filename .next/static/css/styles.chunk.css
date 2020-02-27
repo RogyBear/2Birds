@@ -1072,11 +1072,18 @@ body {
             flex-direction: column;
     width: 700px;
     font-family: 'Candra', 'sans-serif'; }
+    .shipping-info__form__information {
+      font-size: 2rem;
+      color: #ffacba;
+      font-style: italic;
+      text-align: center; }
     .shipping-info__form__title {
       font-size: 5rem;
       color: #ffacba;
       margin-bottom: 3rem;
       text-align: center; }
+      .shipping-info__form__title:last-of-type {
+        margin-top: 3rem; }
     .shipping-info__form__group__input {
       font-family: 'Candra', 'sans-serif';
       padding: 1rem 2rem;

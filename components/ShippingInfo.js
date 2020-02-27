@@ -108,6 +108,7 @@ export default function ShippingInfo() {
 						placeholder={currLang ? ru.phoneNumber : en.phoneNumber}
 					/>
 				</div>
+				<div className="shipping-info__form__information">*{currLang ? ru.information : en.information}</div>
 				{/* <input
 					type="text"
 					name="address"
