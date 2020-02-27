@@ -7,11 +7,11 @@ export const LanguageProvider = (props) => {
 		main: {
 			oneDescription: 'Свадебные приглашения',
 			oneCursive: 'с портретами',
-			twoDescription: 'Свадебные полиграфия',
-			twoCursive: 'готовые дизайны',
+			twoDescription: 'Свадебная полиграфия',
+			twoCursive: 'готовый дизайн',
 			threeDescription: 'Подарки гостям',
 			threeCursive: 'сувениры ручной работы',
-			details: 'Переидти в мазазин'
+			details: 'Перейти в магазин'
 		},
 		nav: {
 			main: 'Главная',
@@ -21,45 +21,45 @@ export const LanguageProvider = (props) => {
 			contact: 'Контакты'
 		},
 		header: {
-			home: 'Свадебеные приглашения',
+			home: 'Свадебные приглашения',
 			store: 'Магазин',
 			gallery: 'Галерея',
 			about: 'Обо мне',
 			contact: 'Контакты',
 			cart: 'Корзина',
 			thankyou: 'Спасибо',
-			shipping: 'Адрес доставки',
+			shipping: 'Подтверждение товаров',
 			confirmation: 'Детали заказа'
 		},
 		product: {
-			custom_cards: 'Свадебные приглашения',
-			prepared_cards: 'Свадебные полиграфия',
+			custom_cards: 'Индивидуальные приглашения',
+			prepared_cards: 'Готовые приглашения',
 			souvenirs: 'Подарки гостям',
 			from: 'от',
 			add: 'Добавить в корзину',
 			complekt: 'Комплект',
-			additions: 'Вы можете дополнить свой комплект приглашения \n следущими дополнениями'
+			additions: 'Вы можете добавить к своему приглашению'
 		},
 		postcard: {
 			name: 'Имя',
 			telephone: 'Телефон',
 			email: 'Почта',
-			message: 'Коментарии',
+			message: 'Комментарии',
 			send: 'Отправить',
-			writing: 'У вас остались\nвопросы?\n\nОставьте,\nпожалуйста, свои\nконтактые данные\nи я с Вами свяжусь!'
+			writing: 'У вас возникли\nвопросы?\n\nОставьте,\nпожалуйста, свои\nконтактые данные,\nи я с Вами свяжусь!'
 		},
 		about: {
 			helloBold: 'Привет!',
 			text:
-				'Меня зовут Огнева Дарья, я - профессиональный\nдизайнер-иллюстратор.\nВ 2010 году окончила Северо-Западный институт Печати\nСанкт-Петербургского университета Технологии и Дизайна по\nспециальности художник-график.\n\n Еще в 2007 году судьба привела меня в свадебную индустрию: свой\nпуть я начала со свадебных магнитов ручной работы в подарок\nгостям, а затем занялась авторскими пригласительными.\n\n И с тех пор я счастлива работать с лучшими заказчиками на свете!\n Это вы: невесты и женихи!\n\n Если у вас возникнут какие-то вопросы, а на сайте на них нет ответа-',
-			endBold: ' загляните в раздел “контакты” и свяжитесь со мной!'
+				'Меня зовут Огнева Дарья, я профессиональный\nдизайнер-иллюстратор.\nВ 2010 году окончила Северо-Западный институт Печати\nСанкт-Петербургского университета Технологии и Дизайна по\nспециальности "Художник-график".\n\n Еще в 2007 году судьба привела меня в свадебную индустрию: свой\nпуть я начала со свадебных магнитов ручной работы в подарок\nгостям, а затем занялась авторскими пригласительными.\n\n И с тех пор я счастлива работать с лучшими заказчиками на свете!\n Это вы - невесты и женихи!\n\n Если у вас возникнут какие-то вопросы, а на сайте на них нет ответа,',
+			endBold: ' загляните в раздел “Контакты” и свяжитесь со мной!'
 		},
 		cart: {
 			nothing_in_cart: 'Корзина пуста',
 			total: 'Итог',
-			confirm: 'Адрес доставки',
+			confirm: 'Контактная информация',
 			unit: 'шт',
-			productImage: 'Картинка товара',
+			productImage: 'Изображение товара',
 			productName: 'Название товара',
 			productAddOns: 'Дополнения',
 			productUnitPrice: 'Стоимость за штуку',
@@ -67,7 +67,7 @@ export const LanguageProvider = (props) => {
 			productTotal: 'Итог',
 			productDelete: 'Удалить товар',
 			orderTotal: 'Итог заказа ',
-			title: 'Адрес доставки',
+			title: 'Контактная информация',
 			firstName: 'Имя',
 			lastName: 'Фамилия',
 			email: 'Почта',
@@ -76,23 +76,23 @@ export const LanguageProvider = (props) => {
 			address2: 'Адрес 2',
 			city: 'Город',
 			country: 'Страна',
-			region: 'Облясть',
+			region: 'Область',
 			index: 'Индекс',
-			confirmation: 'Подтверждение товара',
+			confirmation: 'Подтверждение товаров',
 			submit: 'Отправить'
 		},
 		confirmation: {
 			title: 'Информация о заказе',
 			lineOne: 'Спасибо за заказ!',
-			lineTwo: 'Мы связемся с Вами чтобы подвердить способ оплаты, также как и заказ.',
+			lineTwo: 'Мы свяжемся с Вами, чтобы подтвердить заказ и способ оплаты.',
 			orderNumber: 'Номер заказа'
 		},
 		access: {
-			access: 'У Вас нет доступ к этой странице'
+			access: 'У Вас нет доступа к этой странице'
 		},
 		thankYou: {
 			thanks: 'Спасибо за письмо!',
-			return: 'Мы свяжемся с Вами в течении 24 часа'
+			return: 'Мы свяжемся с Вами в течение 24 часов'
 		}
 	};
 	const englishLanguage = {
@@ -120,13 +120,13 @@ export const LanguageProvider = (props) => {
 			contact: 'Contact',
 			cart: 'Shopping Cart',
 			thankyou: 'Thank You',
-			shipping: 'Shipping Information',
+			shipping: 'Order Review',
 			confirmation: 'Order Details'
 		},
 		product: {
 			custom_cards: 'Custom Invitations',
 			prepared_cards: 'Pre-made Invitations',
-			souvenirs: 'Gifts for Guests',
+			souvenirs: 'Souviners',
 			from: 'from',
 			add: 'Add To Cart',
 			complekt: "What's Included",
@@ -150,7 +150,7 @@ export const LanguageProvider = (props) => {
 		cart: {
 			nothing_in_cart: 'Your Cart is Empty',
 			total: 'Total Price',
-			confirm: 'Shipping Address',
+			confirm: 'Contact Information',
 			unit: 'unit',
 			productImage: 'Product Image',
 			productName: 'Product Name',
@@ -160,7 +160,7 @@ export const LanguageProvider = (props) => {
 			productTotal: 'Total Price',
 			productDelete: 'Delete Item',
 			orderTotal: 'Cart Total',
-			title: 'Shipping Address',
+			title: 'Contact Information',
 			firstName: 'First Name',
 			lastName: 'Last Name',
 			email: 'Email',
@@ -171,7 +171,7 @@ export const LanguageProvider = (props) => {
 			country: 'Country',
 			region: 'State/Province/Region',
 			index: 'Postal Code',
-			confirmation: 'Order Confirmation',
+			confirmation: 'Order Review',
 			submit: 'Submit'
 		},
 		confirmation: {

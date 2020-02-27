@@ -26,11 +26,10 @@ export default function ShippingInfo() {
 		const parsedCart = JSON.parse(sessionStorage.getItem('cart'));
 		const data = { contact, parsedCart };
 		const email = {};
-		console.log(data)
 		axios.post(`${process.env.CMSLINKORDERS}`, data).then((res) => {
 			email.to = res.data.emailAddress;
 			email.subject = `2BirdsWedding: Номер заказа / Order Confirmation: ${res.data.order_number}`;
-			email.text = `Мы получили Ваш заказ! Мы свяжемся с Вами в течении 24 часа. Спасибо! 
+			email.text = `Мы получили Ваш заказ и свяжемся с Вами в течение 24 часов. Спасибо! 
 				<br> 
 				С уважением, 
 				<br>
@@ -39,12 +38,12 @@ export default function ShippingInfo() {
 				<br> 
 				<hr> 
 				<br> 
-				You're Order has been submitted! We will be in contact with you within the next 24 hours. Thank You!
+				Your order has been submitted! We will be in contact with you within 24 hours. Thank You!
 				<br> 
 				Sincerely, 
 				<br>
 				Dasha`;
-
+			email.orderNumber = res.data.order_number;
 			//redirect to thank you page
 
 			router.push({ pathname: '/confirmation', query: { orderNumber: res.data.order_number } });
@@ -109,7 +108,7 @@ export default function ShippingInfo() {
 						placeholder={currLang ? ru.phoneNumber : en.phoneNumber}
 					/>
 				</div>
-				<input
+				{/* <input
 					type="text"
 					name="address"
 					onChange={(e) => {
@@ -170,7 +169,7 @@ export default function ShippingInfo() {
 					className="shipping-info__form__input"
 					placeholder={currLang ? ru.index : en.index}
 					required
-				/>
+				/> */}
 				<h2 className="shipping-info__form__title">{currLang ? ru.confirmation : en.confirmation}</h2>
 				<ul className="shipping-info__form__cart shipping-info__form__cart__header">
 					<li className="shipping-info__form__cart__item shipping-info__form__cart__header">
@@ -212,7 +211,7 @@ export default function ShippingInfo() {
 								</li>
 								<li className="shipping-info__form__cart__item">{el.quantity}</li>
 
-								<li className="shipping-info__form__cart__item">{el.productPrice} p.</li>
+								<li className="shipping-info__form__cart__item">{el.productPrice * el.quantity} p.</li>
 							</ul>
 						);
 					}

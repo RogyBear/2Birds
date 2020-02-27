@@ -12,7 +12,7 @@ export default function Postcard() {
 	const [ contact, setContact ] = useState({
 		code: 'contact',
 		subject: '2BirdsWedding: Ваше письмо было отправлено / Your Message Has Been Sent',
-		text: `Ваше письмо успешно отправилось. Мы свяжемся с Вами в течении 24 часа. Спасибо! 
+		text: `Ваше письмо успешно отправлено. Мы свяжемся с Вами в течение 24 часов. Спасибо! 
 		<br> 
 		С уважением, 
 		<br>
@@ -21,7 +21,7 @@ export default function Postcard() {
 		<br>
 		<hr> 
 		<br>
-		Your message has been sent successfully. We will be in contact with you in 24 hours. Thank you!
+		Your message has been sent successfully. We will be in contact with you within 24 hours. Thank you!
 		<br>
 		Sincerely, 
 		<br>
@@ -91,9 +91,8 @@ export default function Postcard() {
 					<input name="to" required onChange={handleChange} type="text" />
 					{/* Message */}
 					<label>{currLang ? ru.message : en.message}:</label>
-					<textarea name="message" required onChange={handleChange}>
-						{' '}
-					</textarea>
+					<textarea name="message" onChange={handleChange} required />
+
 					{/* Submit Button */}
 					<button type="submit">{currLang ? ru.send : en.send}</button>
 				</form>

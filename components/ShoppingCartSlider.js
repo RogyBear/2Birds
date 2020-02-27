@@ -7,7 +7,7 @@ export default class ShoppingCartSlider extends Component {
 			customPaging: function(i) {
 				return (
 					<a>
-						<img style={{ width: '80px', height: '80px' }} src={`${process.env.CMSLINK}${image[i].url}`} />
+						<img style={{ width: '80px', height: 'auto' }} src={`${process.env.CMSLINK}${image[i].url}`} />
 					</a>
 				);
 			},

@@ -135,7 +135,7 @@ function Post({ product }) {
 							key={options.id}
 							onChange={handleChange}
 						>
-							<option label={options.select_name} value={'0'} />
+							<option label={currLang ? options.select_name_ru : options.select_name_en} value={'0'} />
 							<option
 								value={`${options.price_option_one}-${options.ru_option_one}-${options.en_option_one}`}
 							>

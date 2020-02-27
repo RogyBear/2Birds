@@ -31,7 +31,6 @@ const ShoppingCart = (props) => {
 	);
 	return (
 		<div className="cart">
-			{/* <ClockLoader css={override} size={150} color={'#FFACBA'} loading={loading} /> */}
 			<div className="cart__item">
 				<p className="cart__item__content cart__item__content__header">
 					{currLang ? ru.productImage : en.productImage}
@@ -71,9 +70,10 @@ const ShoppingCart = (props) => {
 							Object.values(el).map((ele) => {
 								arr.push(ele.toString());
 							});
+							console.log(arr[1])
 							return (
 								<li key={el.id} className="cart__item__content__item">
-									{currLang ? `${arr[1]} - ${arr[2]} p.` : `${arr[0]} - ${arr[2]} p.`}
+									{currLang ? `${arr[1]}` : `${arr[0]}`}
 								</li>
 							);
 						})}

@@ -1,0 +1,5 @@
+node-modules/
+.env
+.env.build
+.now
+node_modules

@@ -129,159 +129,9 @@ function DropdownMenu(props) {
 
 /***/ }),
 
-/***/ "./components/Logo.js":
-/*!****************************!*\
-  !*** ./components/Logo.js ***!
-  \****************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Logo; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/router */ "next/router");
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "C:\\Users\\roger\\OneDrive\\Desktop\\Dasha_Next\\Dasha\\components\\Logo.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
-
-function Logo() {
-  let bgAnimation;
-  let logoAnimation;
-  let birdFlyRight;
-  let birdFlyLeft;
-  let wing;
-  const {
-    0: animation,
-    1: setAnimation
-  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false);
-  const router = Object(next_router__WEBPACK_IMPORTED_MODULE_1__["useRouter"])();
-
-  const handleAnimation = () => {
-    setTimeout(() => {
-      setAnimation(true);
-    }, 1000);
-  };
-
-  next_router__WEBPACK_IMPORTED_MODULE_1___default.a.events.on('routeChangeStart', handleAnimation);
-
-  if (router.pathname === '/') {
-    bgAnimation = {
-      animationName: 'background-fade',
-      animationDuration: '1s',
-      animationDelay: '4s',
-      animationFillMode: 'forwards'
-    };
-    logoAnimation = {
-      animationName: 'logo-fade',
-      animationDuration: '3s',
-      animationDelay: '1s',
-      animationFillMode: 'forwards'
-    };
-    birdFlyRight = {
-      animationName: 'bird-fly-right',
-      animationDuration: '3s',
-      animationDelay: '1s',
-      animationFillMode: 'forwards',
-      animationDirection: 'ease-out'
-    };
-    birdFlyLeft = {
-      animationName: 'bird-fly-left',
-      animationDuration: '3s',
-      animationDelay: '1s',
-      animationFillMode: 'forwards',
-      animationDirection: 'ease-out'
-    };
-    wing = {
-      animationName: 'wing-flap',
-      animationDuration: '.13s',
-      animationDelay: '1s',
-      animationIterationCount: 'infinite',
-      animationFillMode: 'forwards'
-    };
-  }
-
-  return __jsx("div", {
-    onAnimationEnd: handleAnimation,
-    style: router.pathname === '/' && animation === false ? bgAnimation : {
-      opacity: 0,
-      zIndex: '-1'
-    },
-    className: "logo",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 56
-    },
-    __self: this
-  }, __jsx("img", {
-    className: "logo__img",
-    style: logoAnimation,
-    src: "../static/img/logo.png",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 61
-    },
-    __self: this
-  }), __jsx("div", {
-    className: "logo__purple-bird ",
-    style: birdFlyRight,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 62
-    },
-    __self: this
-  }, __jsx("img", {
-    className: "logo__purple-bird__body",
-    src: "../static/img/ptichka1.png",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 63
-    },
-    __self: this
-  }), __jsx("img", {
-    className: "logo__purple-bird__wing",
-    style: wing,
-    src: "../static/img/krylo1.png",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 64
-    },
-    __self: this
-  })), __jsx("div", {
-    className: "logo__pink-bird bird-fly",
-    style: birdFlyLeft,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 66
-    },
-    __self: this
-  }, __jsx("img", {
-    className: "logo__pink-bird__body",
-    src: "../static/img/ptichka2.png",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 67
-    },
-    __self: this
-  }), __jsx("img", {
-    className: "logo__pink-bird__wing",
-    style: wing,
-    src: "../static/img/krylo2.png",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 68
-    },
-    __self: this
-  })));
-}
-
-/***/ }),
-
-/***/ "./components/footer.js":
+/***/ "./components/Footer.js":
 /*!******************************!*\
-  !*** ./components/footer.js ***!
+  !*** ./components/Footer.js ***!
   \******************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -292,7 +142,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "C:\\Users\\roger\\OneDrive\\Desktop\\Dasha_Next\\Dasha\\components\\footer.js";
+var _jsxFileName = "C:\\Users\\roger\\OneDrive\\Desktop\\Dasha_Next\\Dasha\\components\\Footer.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
@@ -380,7 +230,7 @@ const Footer = () => {
     },
     __self: undefined
   })))), __jsx("a", {
-    href: "",
+    href: "tg://resolve?domain=@dash_ezh",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 29
@@ -460,9 +310,9 @@ const Footer = () => {
 
 /***/ }),
 
-/***/ "./components/header.js":
+/***/ "./components/Header.js":
 /*!******************************!*\
-  !*** ./components/header.js ***!
+  !*** ./components/Header.js ***!
   \******************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -474,7 +324,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _contexts_LanguageContext__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../contexts/LanguageContext */ "./contexts/LanguageContext.js");
 /* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/router */ "next/router");
 /* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "C:\\Users\\roger\\OneDrive\\Desktop\\Dasha_Next\\Dasha\\components\\header.js";
+var _jsxFileName = "C:\\Users\\roger\\OneDrive\\Desktop\\Dasha_Next\\Dasha\\components\\Header.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
@@ -544,9 +394,161 @@ const Header = () => {
 
 /***/ }),
 
-/***/ "./components/nav.js":
+/***/ "./components/Logo.js":
+/*!****************************!*\
+  !*** ./components/Logo.js ***!
+  \****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/router */ "next/router");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_1__);
+var _jsxFileName = "C:\\Users\\roger\\OneDrive\\Desktop\\Dasha_Next\\Dasha\\components\\Logo.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+function Logo() {
+  let bgAnimation;
+  let logoAnimation;
+  let birdFlyRight;
+  let birdFlyLeft;
+  let wing;
+  const {
+    0: animation,
+    1: setAnimation
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false);
+  const router = Object(next_router__WEBPACK_IMPORTED_MODULE_1__["useRouter"])();
+
+  const handleAnimation = () => {
+    setTimeout(() => {
+      setAnimation(true);
+    }, 1000);
+  };
+
+  next_router__WEBPACK_IMPORTED_MODULE_1___default.a.events.on('routeChangeStart', handleAnimation);
+
+  if (router.pathname === '/') {
+    bgAnimation = {
+      animationName: 'background-fade',
+      animationDuration: '1s',
+      animationDelay: '4s',
+      animationFillMode: 'forwards'
+    };
+    logoAnimation = {
+      animationName: 'logo-fade',
+      animationDuration: '3s',
+      animationDelay: '1s',
+      animationFillMode: 'forwards'
+    };
+    birdFlyRight = {
+      animationName: 'bird-fly-right',
+      animationDuration: '3s',
+      animationDelay: '1s',
+      animationFillMode: 'forwards',
+      animationDirection: 'ease-out'
+    };
+    birdFlyLeft = {
+      animationName: 'bird-fly-left',
+      animationDuration: '3s',
+      animationDelay: '1s',
+      animationFillMode: 'forwards',
+      animationDirection: 'ease-out'
+    };
+    wing = {
+      animationName: 'wing-flap',
+      animationDuration: '.13s',
+      animationDelay: '1s',
+      animationIterationCount: 'infinite',
+      animationFillMode: 'forwards'
+    };
+  }
+
+  return __jsx("div", {
+    onAnimationEnd: handleAnimation,
+    style: router.pathname === '/' && animation === false ? bgAnimation : {
+      opacity: 0,
+      zIndex: '-1'
+    },
+    className: "logo",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 58
+    },
+    __self: this
+  }, __jsx("img", {
+    className: "logo__img",
+    style: logoAnimation,
+    src: "../static/img/logo.png",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 63
+    },
+    __self: this
+  }), __jsx("div", {
+    className: "logo__purple-bird",
+    style: birdFlyRight,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 64
+    },
+    __self: this
+  }, __jsx("img", {
+    className: "logo__purple-bird__body",
+    src: "../static/img/ptichka1.png",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 65
+    },
+    __self: this
+  }), __jsx("img", {
+    className: "logo__purple-bird__wing",
+    style: wing,
+    src: "../static/img/krylo1.png",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 66
+    },
+    __self: this
+  })), __jsx("div", {
+    className: "logo__pink-bird bird-fly",
+    style: birdFlyLeft,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 68
+    },
+    __self: this
+  }, __jsx("img", {
+    className: "logo__pink-bird__body",
+    src: "../static/img/ptichka2.png",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 69
+    },
+    __self: this
+  }), __jsx("img", {
+    className: "logo__pink-bird__wing",
+    style: wing,
+    src: "../static/img/krylo2.png",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 70
+    },
+    __self: this
+  })));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (Logo);
+
+/***/ }),
+
+/***/ "./components/Nav.js":
 /*!***************************!*\
-  !*** ./components/nav.js ***!
+  !*** ./components/Nav.js ***!
   \***************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -561,7 +563,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _DropdownMenu__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./DropdownMenu */ "./components/DropdownMenu.js");
 /* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! next/router */ "next/router");
 /* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_4__);
-var _jsxFileName = "C:\\Users\\roger\\OneDrive\\Desktop\\Dasha_Next\\Dasha\\components\\nav.js";
+var _jsxFileName = "C:\\Users\\roger\\OneDrive\\Desktop\\Dasha_Next\\Dasha\\components\\Nav.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
@@ -1047,11 +1049,11 @@ const LanguageProvider = props => {
     main: {
       oneDescription: 'Свадебные приглашения',
       oneCursive: 'с портретами',
-      twoDescription: 'Свадебные полиграфия',
-      twoCursive: 'готовые дизайны',
+      twoDescription: 'Свадебная полиграфия',
+      twoCursive: 'готовый дизайн',
       threeDescription: 'Подарки гостям',
       threeCursive: 'сувениры ручной работы',
-      details: 'Переидти в мазазин'
+      details: 'Перейти в магазин'
     },
     nav: {
       main: 'Главная',
@@ -1061,44 +1063,44 @@ const LanguageProvider = props => {
       contact: 'Контакты'
     },
     header: {
-      home: 'Свадебеные приглашения',
+      home: 'Свадебные приглашения',
       store: 'Магазин',
       gallery: 'Галерея',
       about: 'Обо мне',
       contact: 'Контакты',
       cart: 'Корзина',
       thankyou: 'Спасибо',
-      shipping: 'Адрес доставки',
+      shipping: 'Подтверждение товаров',
       confirmation: 'Детали заказа'
     },
     product: {
-      custom_cards: 'Свадебные приглашения',
-      prepared_cards: 'Свадебные полиграфия',
+      custom_cards: 'Индивидуальные приглашения',
+      prepared_cards: 'Готовые приглашения',
       souvenirs: 'Подарки гостям',
       from: 'от',
       add: 'Добавить в корзину',
       complekt: 'Комплект',
-      additions: 'Вы можете дополнить свой комплект приглашения \n следущими дополнениями'
+      additions: 'Вы можете добавить к своему приглашению'
     },
     postcard: {
       name: 'Имя',
       telephone: 'Телефон',
       email: 'Почта',
-      message: 'Коментарии',
+      message: 'Комментарии',
       send: 'Отправить',
-      writing: 'У вас остались\nвопросы?\n\nОставьте,\nпожалуйста, свои\nконтактые данные\nи я с Вами свяжусь!'
+      writing: 'У вас возникли\nвопросы?\n\nОставьте,\nпожалуйста, свои\nконтактые данные,\nи я с Вами свяжусь!'
     },
     about: {
       helloBold: 'Привет!',
-      text: 'Меня зовут Огнева Дарья, я - профессиональный\nдизайнер-иллюстратор.\nВ 2010 году окончила Северо-Западный институт Печати\nСанкт-Петербургского университета Технологии и Дизайна по\nспециальности художник-график.\n\n Еще в 2007 году судьба привела меня в свадебную индустрию: свой\nпуть я начала со свадебных магнитов ручной работы в подарок\nгостям, а затем занялась авторскими пригласительными.\n\n И с тех пор я счастлива работать с лучшими заказчиками на свете!\n Это вы: невесты и женихи!\n\n Если у вас возникнут какие-то вопросы, а на сайте на них нет ответа-',
-      endBold: ' загляните в раздел “контакты” и свяжитесь со мной!'
+      text: 'Меня зовут Огнева Дарья, я профессиональный\nдизайнер-иллюстратор.\nВ 2010 году окончила Северо-Западный институт Печати\nСанкт-Петербургского университета Технологии и Дизайна по\nспециальности "Художник-график".\n\n Еще в 2007 году судьба привела меня в свадебную индустрию: свой\nпуть я начала со свадебных магнитов ручной работы в подарок\nгостям, а затем занялась авторскими пригласительными.\n\n И с тех пор я счастлива работать с лучшими заказчиками на свете!\n Это вы - невесты и женихи!\n\n Если у вас возникнут какие-то вопросы, а на сайте на них нет ответа,',
+      endBold: ' загляните в раздел “Контакты” и свяжитесь со мной!'
     },
     cart: {
       nothing_in_cart: 'Корзина пуста',
       total: 'Итог',
-      confirm: 'Адрес доставки',
+      confirm: 'Контактная информация',
       unit: 'шт',
-      productImage: 'Картинка товара',
+      productImage: 'Изображение товара',
       productName: 'Название товара',
       productAddOns: 'Дополнения',
       productUnitPrice: 'Стоимость за штуку',
@@ -1106,7 +1108,7 @@ const LanguageProvider = props => {
       productTotal: 'Итог',
       productDelete: 'Удалить товар',
       orderTotal: 'Итог заказа ',
-      title: 'Адрес доставки',
+      title: 'Контактная информация',
       firstName: 'Имя',
       lastName: 'Фамилия',
       email: 'Почта',
@@ -1115,23 +1117,23 @@ const LanguageProvider = props => {
       address2: 'Адрес 2',
       city: 'Город',
       country: 'Страна',
-      region: 'Облясть',
+      region: 'Область',
       index: 'Индекс',
-      confirmation: 'Подтверждение товара',
+      confirmation: 'Подтверждение товаров',
       submit: 'Отправить'
     },
     confirmation: {
       title: 'Информация о заказе',
       lineOne: 'Спасибо за заказ!',
-      lineTwo: 'Мы связемся с Вами чтобы подвердить способ оплаты, также как и заказ.',
+      lineTwo: 'Мы свяжемся с Вами, чтобы подтвердить заказ и способ оплаты.',
       orderNumber: 'Номер заказа'
     },
     access: {
-      access: 'У Вас нет доступ к этой странице'
+      access: 'У Вас нет доступа к этой странице'
     },
     thankYou: {
       thanks: 'Спасибо за письмо!',
-      return: 'Мы свяжемся с Вами в течении 24 часа'
+      return: 'Мы свяжемся с Вами в течение 24 часов'
     }
   };
   const englishLanguage = {
@@ -1159,13 +1161,13 @@ const LanguageProvider = props => {
       contact: 'Contact',
       cart: 'Shopping Cart',
       thankyou: 'Thank You',
-      shipping: 'Shipping Information',
+      shipping: 'Order Review',
       confirmation: 'Order Details'
     },
     product: {
       custom_cards: 'Custom Invitations',
       prepared_cards: 'Pre-made Invitations',
-      souvenirs: 'Gifts for Guests',
+      souvenirs: 'Souviners',
       from: 'from',
       add: 'Add To Cart',
       complekt: "What's Included",
@@ -1187,7 +1189,7 @@ const LanguageProvider = props => {
     cart: {
       nothing_in_cart: 'Your Cart is Empty',
       total: 'Total Price',
-      confirm: 'Shipping Address',
+      confirm: 'Contact Information',
       unit: 'unit',
       productImage: 'Product Image',
       productName: 'Product Name',
@@ -1197,7 +1199,7 @@ const LanguageProvider = props => {
       productTotal: 'Total Price',
       productDelete: 'Delete Item',
       orderTotal: 'Cart Total',
-      title: 'Shipping Address',
+      title: 'Contact Information',
       firstName: 'First Name',
       lastName: 'Last Name',
       email: 'Email',
@@ -1208,7 +1210,7 @@ const LanguageProvider = props => {
       country: 'Country',
       region: 'State/Province/Region',
       index: 'Postal Code',
-      confirmation: 'Order Confirmation',
+      confirmation: 'Order Review',
       submit: 'Submit'
     },
     confirmation: {
@@ -3363,27 +3365,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var next_app__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! next/app */ "./node_modules/next/app.js");
 /* harmony import */ var next_app__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(next_app__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _components_header__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/header */ "./components/header.js");
-/* harmony import */ var _components_footer__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/footer */ "./components/footer.js");
-/* harmony import */ var _components_nav__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/nav */ "./components/nav.js");
-/* harmony import */ var _static_main_scss__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../static/main.scss */ "./static/main.scss");
-/* harmony import */ var _static_main_scss__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_static_main_scss__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var next_page_transitions__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! next-page-transitions */ "next-page-transitions");
-/* harmony import */ var next_page_transitions__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(next_page_transitions__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var react_helmet__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react-helmet */ "react-helmet");
-/* harmony import */ var react_helmet__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(react_helmet__WEBPACK_IMPORTED_MODULE_11__);
-/* harmony import */ var _contexts_CartContext__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../contexts/CartContext */ "./contexts/CartContext.js");
-/* harmony import */ var _contexts_ShippingContext__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../contexts/ShippingContext */ "./contexts/ShippingContext.js");
-/* harmony import */ var _contexts_LanguageContext__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../contexts/LanguageContext */ "./contexts/LanguageContext.js");
-/* harmony import */ var _components_Logo__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../components/Logo */ "./components/Logo.js");
+/* harmony import */ var _components_Header__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/Header */ "./components/Header.js");
+/* harmony import */ var _components_Footer__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/Footer */ "./components/Footer.js");
+/* harmony import */ var _components_Nav__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/Nav */ "./components/Nav.js");
+/* harmony import */ var _static_main_scss__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../static/main.scss */ "./static/main.scss");
+/* harmony import */ var _static_main_scss__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_static_main_scss__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var next_page_transitions__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! next-page-transitions */ "next-page-transitions");
+/* harmony import */ var next_page_transitions__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(next_page_transitions__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _contexts_CartContext__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../contexts/CartContext */ "./contexts/CartContext.js");
+/* harmony import */ var _contexts_ShippingContext__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../contexts/ShippingContext */ "./contexts/ShippingContext.js");
+/* harmony import */ var _contexts_LanguageContext__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../contexts/LanguageContext */ "./contexts/LanguageContext.js");
+/* harmony import */ var _components_Logo__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../components/Logo */ "./components/Logo.js");
 
 var _jsxFileName = "C:\\Users\\roger\\OneDrive\\Desktop\\Dasha_Next\\Dasha\\pages\\_app.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
-
-
 
 
 
@@ -3414,23 +3410,38 @@ class MyApp extends next_app__WEBPACK_IMPORTED_MODULE_4___default.a {
       className: "container",
       __source: {
         fileName: _jsxFileName,
+        lineNumber: 25
+      },
+      __self: this
+    }, __jsx(next_head__WEBPACK_IMPORTED_MODULE_3___default.a, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 26
+      },
+      __self: this
+    }, __jsx("meta", {
+      name: "viewport",
+      content: "width=device-width, initial-scale=1.0",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 27
+      },
+      __self: this
+    }), __jsx("meta", {
+      charset: "UTF-8",
+      __source: {
+        fileName: _jsxFileName,
         lineNumber: 28
       },
       __self: this
-    }, __jsx(react_helmet__WEBPACK_IMPORTED_MODULE_11__["Helmet"], {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 29
-      },
-      __self: this
-    }, __jsx("link", {
+    }), __jsx("link", {
       rel: "stylesheet",
       type: "text/css",
       charset: "UTF-8",
       href: "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 30
+        lineNumber: 29
       },
       __self: this
     }), __jsx("link", {
@@ -3439,67 +3450,67 @@ class MyApp extends next_app__WEBPACK_IMPORTED_MODULE_4___default.a {
       href: "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 36
+        lineNumber: 35
       },
       __self: this
-    })), __jsx(_contexts_LanguageContext__WEBPACK_IMPORTED_MODULE_14__["LanguageProvider"], {
+    })), __jsx(_contexts_LanguageContext__WEBPACK_IMPORTED_MODULE_12__["LanguageProvider"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 41
+      },
+      __self: this
+    }, __jsx(_contexts_CartContext__WEBPACK_IMPORTED_MODULE_10__["CartProvider"], {
       __source: {
         fileName: _jsxFileName,
         lineNumber: 42
       },
       __self: this
-    }, __jsx(_contexts_CartContext__WEBPACK_IMPORTED_MODULE_12__["CartProvider"], {
+    }, __jsx(_contexts_ShippingContext__WEBPACK_IMPORTED_MODULE_11__["ShippingProvider"], {
       __source: {
         fileName: _jsxFileName,
         lineNumber: 43
       },
       __self: this
-    }, __jsx(_contexts_ShippingContext__WEBPACK_IMPORTED_MODULE_13__["ShippingProvider"], {
+    }, __jsx(_components_Header__WEBPACK_IMPORTED_MODULE_5__["default"], {
       __source: {
         fileName: _jsxFileName,
         lineNumber: 44
       },
       __self: this
-    }, __jsx(_components_header__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    }), __jsx(_components_Nav__WEBPACK_IMPORTED_MODULE_7__["default"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 45
+      },
+      __self: this
+    }), __jsx(_components_Logo__WEBPACK_IMPORTED_MODULE_13__["default"], {
       __source: {
         fileName: _jsxFileName,
         lineNumber: 46
       },
       __self: this
-    }), __jsx(_components_nav__WEBPACK_IMPORTED_MODULE_8__["default"], {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 47
-      },
-      __self: this
-    }), __jsx(_components_Logo__WEBPACK_IMPORTED_MODULE_15__["default"], {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 48
-      },
-      __self: this
-    }), __jsx(next_page_transitions__WEBPACK_IMPORTED_MODULE_10__["PageTransition"], {
+    }), __jsx(next_page_transitions__WEBPACK_IMPORTED_MODULE_9__["PageTransition"], {
       timeout: 500,
       classNames: "page-transition",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 49
+        lineNumber: 47
       },
       __self: this
     }, __jsx(Component, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, pageProps, {
       className: "jsx-1872640052" + " " + (pageProps && pageProps.className != null && pageProps.className || ""),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 50
+        lineNumber: 48
       },
       __self: this
     }))), __jsx(styled_jsx_style__WEBPACK_IMPORTED_MODULE_1___default.a, {
       id: "1872640052",
       __self: this
-    }, ".page-transition-enter{opacity:0;}.page-transition-enter-active{opacity:1;-webkit-transition:opacity 300ms;transition:opacity 300ms;}.page-transition-exit{opacity:1;}.page-transition-exit-active{opacity:0;-webkit-transition:opacity 300ms;transition:opacity 300ms;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIkM6XFxVc2Vyc1xccm9nZXJcXE9uZURyaXZlXFxEZXNrdG9wXFxEYXNoYV9OZXh0XFxEYXNoYVxccGFnZXNcXF9hcHAuanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBbUQwQixBQUdvQixBQUdBLEFBSUEsQUFHQSxVQVRYLEFBRzBCLEFBSTFCLEFBRzBCLDBEQU4xQixBQU9BIiwiZmlsZSI6IkM6XFxVc2Vyc1xccm9nZXJcXE9uZURyaXZlXFxEZXNrdG9wXFxEYXNoYV9OZXh0XFxEYXNoYVxccGFnZXNcXF9hcHAuanMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgUmVhY3QgZnJvbSAncmVhY3QnO1xyXG5pbXBvcnQgSGVhZCBmcm9tICduZXh0L2hlYWQnO1xyXG5pbXBvcnQgQXBwIGZyb20gJ25leHQvYXBwJztcclxuaW1wb3J0IExpbmsgZnJvbSAnbmV4dC9saW5rJztcclxuXHJcbmltcG9ydCBIZWFkZXIgZnJvbSAnLi4vY29tcG9uZW50cy9oZWFkZXInO1xyXG5pbXBvcnQgRm9vdGVyIGZyb20gJy4uL2NvbXBvbmVudHMvZm9vdGVyJztcclxuaW1wb3J0IE5hdiBmcm9tICcuLi9jb21wb25lbnRzL25hdic7XHJcbmltcG9ydCAnLi4vc3RhdGljL21haW4uc2Nzcyc7XHJcbmltcG9ydCB7IFBhZ2VUcmFuc2l0aW9uIH0gZnJvbSAnbmV4dC1wYWdlLXRyYW5zaXRpb25zJztcclxuaW1wb3J0IHsgSGVsbWV0IH0gZnJvbSAncmVhY3QtaGVsbWV0JztcclxuaW1wb3J0IHsgQ2FydFByb3ZpZGVyIH0gZnJvbSAnLi4vY29udGV4dHMvQ2FydENvbnRleHQnO1xyXG5pbXBvcnQgeyBTaGlwcGluZ1Byb3ZpZGVyIH0gZnJvbSAnLi4vY29udGV4dHMvU2hpcHBpbmdDb250ZXh0JztcclxuaW1wb3J0IHsgTGFuZ3VhZ2VQcm92aWRlciB9IGZyb20gJy4uL2NvbnRleHRzL0xhbmd1YWdlQ29udGV4dCc7XHJcbmltcG9ydCBMb2dvIGZyb20gJy4uL2NvbXBvbmVudHMvTG9nbyc7XHJcbmNsYXNzIE15QXBwIGV4dGVuZHMgQXBwIHtcclxuXHRjb25zdHJ1Y3Rvcihwcm9wcykge1xyXG5cdFx0c3VwZXIocHJvcHMpO1xyXG5cdFx0dGhpcy5zdGF0ZSA9IHtcclxuXHRcdFx0Y2FydDogW11cclxuXHRcdH07XHJcblx0fVxyXG5cclxuXHRyZW5kZXIoKSB7XHJcblx0XHRjb25zdCB7IENvbXBvbmVudCwgcGFnZVByb3BzIH0gPSB0aGlzLnByb3BzO1xyXG5cclxuXHRcdHJldHVybiAoXHJcblx0XHRcdDxkaXYgY2xhc3NOYW1lPVwiY29udGFpbmVyXCI+XHJcblx0XHRcdFx0PEhlbG1ldD5cclxuXHRcdFx0XHRcdDxsaW5rXHJcblx0XHRcdFx0XHRcdHJlbD1cInN0eWxlc2hlZXRcIlxyXG5cdFx0XHRcdFx0XHR0eXBlPVwidGV4dC9jc3NcIlxyXG5cdFx0XHRcdFx0XHRjaGFyc2V0PVwiVVRGLThcIlxyXG5cdFx0XHRcdFx0XHRocmVmPVwiaHR0cHM6Ly9jZG5qcy5jbG91ZGZsYXJlLmNvbS9hamF4L2xpYnMvc2xpY2stY2Fyb3VzZWwvMS42LjAvc2xpY2subWluLmNzc1wiXHJcblx0XHRcdFx0XHQvPlxyXG5cdFx0XHRcdFx0PGxpbmtcclxuXHRcdFx0XHRcdFx0cmVsPVwic3R5bGVzaGVldFwiXHJcblx0XHRcdFx0XHRcdHR5cGU9XCJ0ZXh0L2Nzc1wiXHJcblx0XHRcdFx0XHRcdGhyZWY9XCJodHRwczovL2NkbmpzLmNsb3VkZmxhcmUuY29tL2FqYXgvbGlicy9zbGljay1jYXJvdXNlbC8xLjYuMC9zbGljay10aGVtZS5taW4uY3NzXCJcclxuXHRcdFx0XHRcdC8+XHJcblx0XHRcdFx0PC9IZWxtZXQ+XHJcblx0XHRcdFx0PExhbmd1YWdlUHJvdmlkZXI+XHJcblx0XHRcdFx0XHQ8Q2FydFByb3ZpZGVyPlxyXG5cdFx0XHRcdFx0XHQ8U2hpcHBpbmdQcm92aWRlcj5cclxuXHRcdFx0XHRcdFx0XHRcclxuXHRcdFx0XHRcdFx0XHQ8SGVhZGVyIC8+XHJcblx0XHRcdFx0XHRcdFx0PE5hdiAvPlxyXG5cdFx0XHRcdFx0XHRcdDxMb2dvLz5cclxuXHRcdFx0XHRcdFx0XHQ8UGFnZVRyYW5zaXRpb24gdGltZW91dD17NTAwfSBjbGFzc05hbWVzPVwicGFnZS10cmFuc2l0aW9uXCI+XHJcblx0XHRcdFx0XHRcdFx0XHQ8Q29tcG9uZW50IHsuLi5wYWdlUHJvcHN9IC8+XHJcblx0XHRcdFx0XHRcdFx0PC9QYWdlVHJhbnNpdGlvbj5cclxuXHRcdFx0XHRcdFx0XHQ8c3R5bGUganN4IGdsb2JhbD57YFxyXG5cdFx0XHRcdFx0XHRcdFx0LnBhZ2UtdHJhbnNpdGlvbi1lbnRlciB7XHJcblx0XHRcdFx0XHRcdFx0XHRcdG9wYWNpdHk6IDA7XHJcblx0XHRcdFx0XHRcdFx0XHR9XHJcblx0XHRcdFx0XHRcdFx0XHQucGFnZS10cmFuc2l0aW9uLWVudGVyLWFjdGl2ZSB7XHJcblx0XHRcdFx0XHRcdFx0XHRcdG9wYWNpdHk6IDE7XHJcblx0XHRcdFx0XHRcdFx0XHRcdHRyYW5zaXRpb246IG9wYWNpdHkgMzAwbXM7XHJcblx0XHRcdFx0XHRcdFx0XHR9XHJcblx0XHRcdFx0XHRcdFx0XHQucGFnZS10cmFuc2l0aW9uLWV4aXQge1xyXG5cdFx0XHRcdFx0XHRcdFx0XHRvcGFjaXR5OiAxO1xyXG5cdFx0XHRcdFx0XHRcdFx0fVxyXG5cdFx0XHRcdFx0XHRcdFx0LnBhZ2UtdHJhbnNpdGlvbi1leGl0LWFjdGl2ZSB7XHJcblx0XHRcdFx0XHRcdFx0XHRcdG9wYWNpdHk6IDA7XHJcblx0XHRcdFx0XHRcdFx0XHRcdHRyYW5zaXRpb246IG9wYWNpdHkgMzAwbXM7XHJcblx0XHRcdFx0XHRcdFx0XHR9XHJcblx0XHRcdFx0XHRcdFx0YH08L3N0eWxlPlxyXG5cdFx0XHRcdFx0XHRcdDxGb290ZXIgLz5cclxuXHRcdFx0XHRcdFx0PC9TaGlwcGluZ1Byb3ZpZGVyPlxyXG5cdFx0XHRcdFx0PC9DYXJ0UHJvdmlkZXI+XHJcblx0XHRcdFx0PC9MYW5ndWFnZVByb3ZpZGVyPlxyXG5cdFx0XHQ8L2Rpdj5cclxuXHRcdCk7XHJcblx0fVxyXG59XHJcblxyXG5leHBvcnQgZGVmYXVsdCBNeUFwcDtcclxuIl19 */\n/*@ sourceURL=C:\\Users\\roger\\OneDrive\\Desktop\\Dasha_Next\\Dasha\\pages\\_app.js */"), __jsx(_components_footer__WEBPACK_IMPORTED_MODULE_7__["default"], {
+    }, ".page-transition-enter{opacity:0;}.page-transition-enter-active{opacity:1;-webkit-transition:opacity 300ms;transition:opacity 300ms;}.page-transition-exit{opacity:1;}.page-transition-exit-active{opacity:0;-webkit-transition:opacity 300ms;transition:opacity 300ms;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIkM6XFxVc2Vyc1xccm9nZXJcXE9uZURyaXZlXFxEZXNrdG9wXFxEYXNoYV9OZXh0XFxEYXNoYVxccGFnZXNcXF9hcHAuanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBaUQwQixBQUdvQixBQUdBLEFBSUEsQUFHQSxVQVRYLEFBRzBCLEFBSTFCLEFBRzBCLDBEQU4xQixBQU9BIiwiZmlsZSI6IkM6XFxVc2Vyc1xccm9nZXJcXE9uZURyaXZlXFxEZXNrdG9wXFxEYXNoYV9OZXh0XFxEYXNoYVxccGFnZXNcXF9hcHAuanMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgUmVhY3QgZnJvbSAncmVhY3QnO1xyXG5pbXBvcnQgSGVhZCBmcm9tICduZXh0L2hlYWQnO1xyXG5pbXBvcnQgQXBwIGZyb20gJ25leHQvYXBwJztcclxuaW1wb3J0IEhlYWRlciBmcm9tICcuLi9jb21wb25lbnRzL0hlYWRlcic7XHJcbmltcG9ydCBGb290ZXIgZnJvbSAnLi4vY29tcG9uZW50cy9Gb290ZXInO1xyXG5pbXBvcnQgTmF2IGZyb20gJy4uL2NvbXBvbmVudHMvTmF2JztcclxuaW1wb3J0ICcuLi9zdGF0aWMvbWFpbi5zY3NzJztcclxuaW1wb3J0IHsgUGFnZVRyYW5zaXRpb24gfSBmcm9tICduZXh0LXBhZ2UtdHJhbnNpdGlvbnMnO1xyXG5pbXBvcnQgeyBDYXJ0UHJvdmlkZXIgfSBmcm9tICcuLi9jb250ZXh0cy9DYXJ0Q29udGV4dCc7XHJcbmltcG9ydCB7IFNoaXBwaW5nUHJvdmlkZXIgfSBmcm9tICcuLi9jb250ZXh0cy9TaGlwcGluZ0NvbnRleHQnO1xyXG5pbXBvcnQgeyBMYW5ndWFnZVByb3ZpZGVyIH0gZnJvbSAnLi4vY29udGV4dHMvTGFuZ3VhZ2VDb250ZXh0JztcclxuaW1wb3J0IExvZ28gZnJvbSAnLi4vY29tcG9uZW50cy9Mb2dvJztcclxuY2xhc3MgTXlBcHAgZXh0ZW5kcyBBcHAge1xyXG5cdGNvbnN0cnVjdG9yKHByb3BzKSB7XHJcblx0XHRzdXBlcihwcm9wcyk7XHJcblx0XHR0aGlzLnN0YXRlID0ge1xyXG5cdFx0XHRjYXJ0OiBbXVxyXG5cdFx0fTtcclxuXHR9XHJcblxyXG5cdHJlbmRlcigpIHtcclxuXHRcdGNvbnN0IHsgQ29tcG9uZW50LCBwYWdlUHJvcHMgfSA9IHRoaXMucHJvcHM7XHJcblxyXG5cdFx0cmV0dXJuIChcclxuXHRcdFx0PGRpdiBjbGFzc05hbWU9XCJjb250YWluZXJcIj5cclxuXHRcdFx0XHQ8SGVhZD5cclxuXHRcdFx0XHRcdDxtZXRhIG5hbWU9XCJ2aWV3cG9ydFwiIGNvbnRlbnQ9XCJ3aWR0aD1kZXZpY2Utd2lkdGgsIGluaXRpYWwtc2NhbGU9MS4wXCIgLz5cclxuXHRcdFx0XHRcdDxtZXRhIGNoYXJzZXQ9XCJVVEYtOFwiIC8+XHJcblx0XHRcdFx0XHQ8bGlua1xyXG5cdFx0XHRcdFx0XHRyZWw9XCJzdHlsZXNoZWV0XCJcclxuXHRcdFx0XHRcdFx0dHlwZT1cInRleHQvY3NzXCJcclxuXHRcdFx0XHRcdFx0Y2hhcnNldD1cIlVURi04XCJcclxuXHRcdFx0XHRcdFx0aHJlZj1cImh0dHBzOi8vY2RuanMuY2xvdWRmbGFyZS5jb20vYWpheC9saWJzL3NsaWNrLWNhcm91c2VsLzEuNi4wL3NsaWNrLm1pbi5jc3NcIlxyXG5cdFx0XHRcdFx0Lz5cclxuXHRcdFx0XHRcdDxsaW5rXHJcblx0XHRcdFx0XHRcdHJlbD1cInN0eWxlc2hlZXRcIlxyXG5cdFx0XHRcdFx0XHR0eXBlPVwidGV4dC9jc3NcIlxyXG5cdFx0XHRcdFx0XHRocmVmPVwiaHR0cHM6Ly9jZG5qcy5jbG91ZGZsYXJlLmNvbS9hamF4L2xpYnMvc2xpY2stY2Fyb3VzZWwvMS42LjAvc2xpY2stdGhlbWUubWluLmNzc1wiXHJcblx0XHRcdFx0XHQvPlxyXG5cdFx0XHRcdDwvSGVhZD5cclxuXHRcdFx0XHQ8TGFuZ3VhZ2VQcm92aWRlcj5cclxuXHRcdFx0XHRcdDxDYXJ0UHJvdmlkZXI+XHJcblx0XHRcdFx0XHRcdDxTaGlwcGluZ1Byb3ZpZGVyPlxyXG5cdFx0XHRcdFx0XHRcdDxIZWFkZXIgLz5cclxuXHRcdFx0XHRcdFx0XHQ8TmF2IC8+XHJcblx0XHRcdFx0XHRcdFx0PExvZ28gLz5cclxuXHRcdFx0XHRcdFx0XHQ8UGFnZVRyYW5zaXRpb24gdGltZW91dD17NTAwfSBjbGFzc05hbWVzPVwicGFnZS10cmFuc2l0aW9uXCI+XHJcblx0XHRcdFx0XHRcdFx0XHQ8Q29tcG9uZW50IHsuLi5wYWdlUHJvcHN9IC8+XHJcblx0XHRcdFx0XHRcdFx0PC9QYWdlVHJhbnNpdGlvbj5cclxuXHRcdFx0XHRcdFx0XHQ8c3R5bGUganN4IGdsb2JhbD57YFxyXG5cdFx0XHRcdFx0XHRcdFx0LnBhZ2UtdHJhbnNpdGlvbi1lbnRlciB7XHJcblx0XHRcdFx0XHRcdFx0XHRcdG9wYWNpdHk6IDA7XHJcblx0XHRcdFx0XHRcdFx0XHR9XHJcblx0XHRcdFx0XHRcdFx0XHQucGFnZS10cmFuc2l0aW9uLWVudGVyLWFjdGl2ZSB7XHJcblx0XHRcdFx0XHRcdFx0XHRcdG9wYWNpdHk6IDE7XHJcblx0XHRcdFx0XHRcdFx0XHRcdHRyYW5zaXRpb246IG9wYWNpdHkgMzAwbXM7XHJcblx0XHRcdFx0XHRcdFx0XHR9XHJcblx0XHRcdFx0XHRcdFx0XHQucGFnZS10cmFuc2l0aW9uLWV4aXQge1xyXG5cdFx0XHRcdFx0XHRcdFx0XHRvcGFjaXR5OiAxO1xyXG5cdFx0XHRcdFx0XHRcdFx0fVxyXG5cdFx0XHRcdFx0XHRcdFx0LnBhZ2UtdHJhbnNpdGlvbi1leGl0LWFjdGl2ZSB7XHJcblx0XHRcdFx0XHRcdFx0XHRcdG9wYWNpdHk6IDA7XHJcblx0XHRcdFx0XHRcdFx0XHRcdHRyYW5zaXRpb246IG9wYWNpdHkgMzAwbXM7XHJcblx0XHRcdFx0XHRcdFx0XHR9XHJcblx0XHRcdFx0XHRcdFx0YH08L3N0eWxlPlxyXG5cdFx0XHRcdFx0XHRcdDxGb290ZXIgLz5cclxuXHRcdFx0XHRcdFx0PC9TaGlwcGluZ1Byb3ZpZGVyPlxyXG5cdFx0XHRcdFx0PC9DYXJ0UHJvdmlkZXI+XHJcblx0XHRcdFx0PC9MYW5ndWFnZVByb3ZpZGVyPlxyXG5cdFx0XHQ8L2Rpdj5cclxuXHRcdCk7XHJcblx0fVxyXG59XHJcblxyXG5leHBvcnQgZGVmYXVsdCBNeUFwcDtcclxuIl19 */\n/*@ sourceURL=C:\\Users\\roger\\OneDrive\\Desktop\\Dasha_Next\\Dasha\\pages\\_app.js */"), __jsx(_components_Footer__WEBPACK_IMPORTED_MODULE_6__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 68
+        lineNumber: 66
       },
       __self: this
     })))));
@@ -3718,17 +3729,6 @@ module.exports = require("prop-types-exact");
 /***/ (function(module, exports) {
 
 module.exports = require("react");
-
-/***/ }),
-
-/***/ "react-helmet":
-/*!*******************************!*\
-  !*** external "react-helmet" ***!
-  \*******************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("react-helmet");
 
 /***/ }),
 

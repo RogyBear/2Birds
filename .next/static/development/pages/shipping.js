@@ -1,82 +1,5 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static\\development\\pages\\shipping.js"],{
 
-/***/ "./components/ConfirmationInfo.js":
-/*!****************************************!*\
-  !*** ./components/ConfirmationInfo.js ***!
-  \****************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _contexts_LanguageContext__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../contexts/LanguageContext */ "./contexts/LanguageContext.js");
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/router */ "./node_modules/next/dist/client/router.js");
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "C:\\Users\\roger\\OneDrive\\Desktop\\Dasha_Next\\Dasha\\components\\ConfirmationInfo.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
-
-
-
-function ConfirmationInfo(props) {
-  var _useContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(_contexts_LanguageContext__WEBPACK_IMPORTED_MODULE_1__["LanguageContext"]),
-      language = _useContext.language,
-      currLang = _useContext.currLang,
-      setCurrLang = _useContext.setCurrLang;
-
-  var ru = language.russian.confirmation;
-  var en = language.english.confirmation;
-  return __jsx("div", {
-    className: "confirmation",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 10
-    },
-    __self: this
-  }, __jsx("h1", {
-    className: "confirmation__title",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 11
-    },
-    __self: this
-  }, currLang ? ru.title : en.title), __jsx("p", {
-    className: "confirmation__line-one",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 13
-    },
-    __self: this
-  }, currLang ? ru.lineOne : en.lineOne), __jsx("p", {
-    className: "confirmation__line-two",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 14
-    },
-    __self: this
-  }, currLang ? ru.lineTwo : en.lineTwo), __jsx("h2", {
-    className: "confirmation__order",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 16
-    },
-    __self: this
-  }, __jsx("p", {
-    className: "confirmation__order__line-three",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 17
-    },
-    __self: this
-  }, currLang ? ru.orderNumber : en.orderNumber, ": ", props.router.query.orderNumber)));
-}
-
-/* harmony default export */ __webpack_exports__["default"] = (Object(next_router__WEBPACK_IMPORTED_MODULE_2__["withRouter"])(ConfirmationInfo));
-
-/***/ }),
-
 /***/ "./components/ShippingInfo.js":
 /*!************************************!*\
   !*** ./components/ShippingInfo.js ***!
@@ -146,14 +69,11 @@ function ShippingInfo() {
       parsedCart: parsedCart
     };
     var email = {};
-    axios__WEBPACK_IMPORTED_MODULE_5___default.a.post("".concat("http://localhost:1337/orders"), data, {
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    }).then(function (res) {
+    axios__WEBPACK_IMPORTED_MODULE_5___default.a.post("".concat("http://localhost:1337/orders"), data).then(function (res) {
       email.to = res.data.emailAddress;
       email.subject = "2BirdsWedding: \u041D\u043E\u043C\u0435\u0440 \u0437\u0430\u043A\u0430\u0437\u0430 / Order Confirmation: ".concat(res.data.order_number);
-      email.text = "\u041C\u044B \u043F\u043E\u043B\u0443\u0447\u0438\u043B\u0438 \u0412\u0430\u0448 \u0437\u0430\u043A\u0430\u0437! \u041C\u044B \u0441\u0432\u044F\u0436\u0435\u043C\u0441\u044F \u0441 \u0412\u0430\u043C\u0438 \u0432 \u0442\u0435\u0447\u0435\u043D\u0438\u0438 24 \u0447\u0430\u0441\u0430. \u0421\u043F\u0430\u0441\u0438\u0431\u043E! \n\t\t\t\t<br> \n\t\t\t\t\u0421 \u0443\u0432\u0430\u0436\u0435\u043D\u0438\u0435\u043C, \n\t\t\t\t<br>\n\t\t\t\t\u0414\u0430\u0448\u0430 \n\t\t\t\t<br>\n\t\t\t\t<br> \n\t\t\t\t<hr> \n\t\t\t\t<br> \n\t\t\t\tYou're Order has been submitted! We will be in contact with you within the next 24 hours. Thank You!\n\t\t\t\t<br> \n\t\t\t\tSincerely, \n\t\t\t\t<br>\n\t\t\t\tDasha"; //redirect to thank you page
+      email.text = "\u041C\u044B \u043F\u043E\u043B\u0443\u0447\u0438\u043B\u0438 \u0412\u0430\u0448 \u0437\u0430\u043A\u0430\u0437 \u0438 \u0441\u0432\u044F\u0436\u0435\u043C\u0441\u044F \u0441 \u0412\u0430\u043C\u0438 \u0432 \u0442\u0435\u0447\u0435\u043D\u0438\u0435 24 \u0447\u0430\u0441\u043E\u0432. \u0421\u043F\u0430\u0441\u0438\u0431\u043E! \n\t\t\t\t<br> \n\t\t\t\t\u0421 \u0443\u0432\u0430\u0436\u0435\u043D\u0438\u0435\u043C, \n\t\t\t\t<br>\n\t\t\t\t\u0414\u0430\u0448\u0430 \n\t\t\t\t<br>\n\t\t\t\t<br> \n\t\t\t\t<hr> \n\t\t\t\t<br> \n\t\t\t\tYour order has been submitted! We will be in contact with you within 24 hours. Thank You!\n\t\t\t\t<br> \n\t\t\t\tSincerely, \n\t\t\t\t<br>\n\t\t\t\tDasha";
+      email.orderNumber = res.data.order_number; //redirect to thank you page
 
       router.push({
         pathname: '/confirmation',
@@ -163,7 +83,7 @@ function ShippingInfo() {
       }); //clear session storage
 
       setCart([]);
-      return axios__WEBPACK_IMPORTED_MODULE_5___default.a.post("".concat("http://localhost:1337/email"), email, res);
+      return axios__WEBPACK_IMPORTED_MODULE_5___default.a.post("".concat("http://localhost:1337/email"), email);
     });
   }; //Handles iteration of items in the session storage cart
 
@@ -172,7 +92,7 @@ function ShippingInfo() {
     className: "shipping-info",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 68
+      lineNumber: 61
     },
     __self: this
   }, __jsx("form", {
@@ -183,14 +103,14 @@ function ShippingInfo() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 69
+      lineNumber: 62
     },
     __self: this
   }, __jsx("h2", {
     className: "shipping-info__form__title",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 70
+      lineNumber: 63
     },
     __self: this
   }, currLang ? ru.title : en.title), __jsx("div", {
@@ -198,7 +118,7 @@ function ShippingInfo() {
     style: style,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 71
+      lineNumber: 64
     },
     __self: this
   }, __jsx("input", {
@@ -215,7 +135,7 @@ function ShippingInfo() {
     required: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 72
+      lineNumber: 65
     },
     __self: this
   }), __jsx("input", {
@@ -232,7 +152,7 @@ function ShippingInfo() {
     required: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 83
+      lineNumber: 76
     },
     __self: this
   })), __jsx("div", {
@@ -240,7 +160,7 @@ function ShippingInfo() {
     style: style,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 95
+      lineNumber: 88
     },
     __self: this
   }, __jsx("input", {
@@ -257,7 +177,7 @@ function ShippingInfo() {
     required: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 96
+      lineNumber: 89
     },
     __self: this
   }), __jsx("input", {
@@ -273,145 +193,56 @@ function ShippingInfo() {
     placeholder: currLang ? ru.phoneNumber : en.phoneNumber,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 107
+      lineNumber: 100
     },
     __self: this
-  })), __jsx("input", {
-    type: "text",
-    name: "address",
-    onChange: function onChange(e) {
-      handleChange(e);
-    },
-    className: "shipping-info__form__input",
-    placeholder: currLang ? ru.address : en.address,
-    required: true,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 118
-    },
-    __self: this
-  }), __jsx("input", {
-    type: "text",
-    name: "address_two",
-    onChange: function onChange(e) {
-      handleChange(e);
-    },
-    className: "shipping-info__form__input",
-    placeholder: currLang ? ru.address2 : en.address2,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 128
-    },
-    __self: this
-  }), __jsx("input", {
-    type: "text",
-    name: "city",
-    onChange: function onChange(e) {
-      handleChange(e);
-    },
-    className: "shipping-info__form__input",
-    placeholder: currLang ? ru.city : en.city,
-    required: true,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 137
-    },
-    __self: this
-  }), __jsx("div", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 147
-    },
-    __self: this
-  }), __jsx("input", {
-    type: "text",
-    name: "state_region_province",
-    onChange: function onChange(e) {
-      handleChange(e);
-    },
-    className: "shipping-info__form__input",
-    placeholder: currLang ? ru.region : en.region,
-    required: true,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 148
-    },
-    __self: this
-  }), __jsx("input", {
-    type: "text",
-    name: "country",
-    onChange: function onChange(e) {
-      handleChange(e);
-    },
-    className: "shipping-info__form__input",
-    placeholder: currLang ? ru.country : en.country,
-    required: true,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 159
-    },
-    __self: this
-  }), __jsx("input", {
-    type: "text",
-    name: "index",
-    onChange: function onChange(e) {
-      handleChange(e);
-    },
-    className: "shipping-info__form__input",
-    placeholder: currLang ? ru.index : en.index,
-    required: true,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 170
-    },
-    __self: this
-  }), __jsx("h2", {
+  })), __jsx("h2", {
     className: "shipping-info__form__title",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 180
+      lineNumber: 173
     },
     __self: this
   }, currLang ? ru.confirmation : en.confirmation), __jsx("ul", {
     className: "shipping-info__form__cart shipping-info__form__cart__header",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 181
+      lineNumber: 174
     },
     __self: this
   }, __jsx("li", {
     className: "shipping-info__form__cart__item shipping-info__form__cart__header",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 182
+      lineNumber: 175
     },
     __self: this
   }, currLang ? ru.productImage : en.productImage), __jsx("li", {
     className: "shipping-info__form__cart__item shipping-info__form__cart__header",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 185
+      lineNumber: 178
     },
     __self: this
   }, currLang ? ru.productName : en.productName), __jsx("li", {
     className: "shipping-info__form__cart__item shipping-info__form__cart__header",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 188
+      lineNumber: 181
     },
     __self: this
   }, currLang ? ru.productAddOns : en.productAddOns), __jsx("li", {
     className: "shipping-info__form__cart__item shipping-info__form__cart__header",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 191
+      lineNumber: 184
     },
     __self: this
   }, currLang ? ru.productQuantity : en.productQuantity), __jsx("li", {
     className: "shipping-info__form__cart__item shipping-info__form__cart__header",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 195
+      lineNumber: 188
     },
     __self: this
   }, currLang ? ru.productTotal : en.productTotal)), _babel_runtime_corejs2_core_js_object_values__WEBPACK_IMPORTED_MODULE_0___default()(cartConfirm).map(function (el) {
@@ -420,14 +251,14 @@ function ShippingInfo() {
         className: "shipping-info__form__cart",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 202
+          lineNumber: 195
         },
         __self: this
       }, __jsx("li", {
         className: "shipping-info__form__cart__item",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 203
+          lineNumber: 196
         },
         __self: this
       }, __jsx("img", {
@@ -438,27 +269,27 @@ function ShippingInfo() {
         src: "".concat("http://localhost:1337").concat(el.productImage),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 204
+          lineNumber: 197
         },
         __self: this
       })), __jsx("li", {
         className: "shipping-info__form__cart__item",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 209
+          lineNumber: 202
         },
         __self: this
       }, currLang ? el.productName.ru : el.productName.en), __jsx("li", {
         className: "shipping-info__form__cart__item",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 212
+          lineNumber: 205
         },
         __self: this
       }, __jsx("ul", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 213
+          lineNumber: 206
         },
         __self: this
       }, _babel_runtime_corejs2_core_js_object_values__WEBPACK_IMPORTED_MODULE_0___default()(el.productParams).map(function (element) {
@@ -466,7 +297,7 @@ function ShippingInfo() {
           key: element.id,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 215
+            lineNumber: 208
           },
           __self: this
         }, currLang ? element.ru : element.en);
@@ -474,17 +305,17 @@ function ShippingInfo() {
         className: "shipping-info__form__cart__item",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 219
+          lineNumber: 212
         },
         __self: this
       }, el.quantity), __jsx("li", {
         className: "shipping-info__form__cart__item",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 221
+          lineNumber: 214
         },
         __self: this
-      }, el.productPrice, " p."));
+      }, el.productPrice * el.quantity, " p."));
     }
   }), __jsx("ul", {
     className: "shipping-info__form__cart",
@@ -493,7 +324,7 @@ function ShippingInfo() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 226
+      lineNumber: 219
     },
     __self: this
   }, __jsx("li", {
@@ -503,7 +334,7 @@ function ShippingInfo() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 227
+      lineNumber: 220
     },
     __self: this
   }, ' '), __jsx("li", {
@@ -513,14 +344,14 @@ function ShippingInfo() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 230
+      lineNumber: 223
     },
     __self: this
   }, ' '), __jsx("li", {
     className: "shipping-info__form__cart__item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 233
+      lineNumber: 226
     },
     __self: this
   }, __jsx("button", {
@@ -531,21 +362,21 @@ function ShippingInfo() {
     className: "shipping-info__form__button",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 234
+      lineNumber: 227
     },
     __self: this
   }, currLang ? ru.submit : en.submit)), __jsx("li", {
     className: "shipping-info__form__cart__item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 244
+      lineNumber: 237
     },
     __self: this
   }, currLang ? ru.orderTotal : en.orderTotal, ":"), __jsx("li", {
     className: "shipping-info__form__cart__item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 245
+      lineNumber: 238
     },
     __self: this
   }, totalStoredPrice, " p."))));
@@ -737,11 +568,11 @@ var LanguageProvider = function LanguageProvider(props) {
     main: {
       oneDescription: 'Свадебные приглашения',
       oneCursive: 'с портретами',
-      twoDescription: 'Свадебные полиграфия',
-      twoCursive: 'готовые дизайны',
+      twoDescription: 'Свадебная полиграфия',
+      twoCursive: 'готовый дизайн',
       threeDescription: 'Подарки гостям',
       threeCursive: 'сувениры ручной работы',
-      details: 'Переидти в мазазин'
+      details: 'Перейти в магазин'
     },
     nav: {
       main: 'Главная',
@@ -751,44 +582,44 @@ var LanguageProvider = function LanguageProvider(props) {
       contact: 'Контакты'
     },
     header: {
-      home: 'Свадебеные приглашения',
+      home: 'Свадебные приглашения',
       store: 'Магазин',
       gallery: 'Галерея',
       about: 'Обо мне',
       contact: 'Контакты',
       cart: 'Корзина',
       thankyou: 'Спасибо',
-      shipping: 'Адрес доставки',
+      shipping: 'Подтверждение товаров',
       confirmation: 'Детали заказа'
     },
     product: {
-      custom_cards: 'Свадебные приглашения',
-      prepared_cards: 'Свадебные полиграфия',
+      custom_cards: 'Индивидуальные приглашения',
+      prepared_cards: 'Готовые приглашения',
       souvenirs: 'Подарки гостям',
       from: 'от',
       add: 'Добавить в корзину',
       complekt: 'Комплект',
-      additions: 'Вы можете дополнить свой комплект приглашения \n следущими дополнениями'
+      additions: 'Вы можете добавить к своему приглашению'
     },
     postcard: {
       name: 'Имя',
       telephone: 'Телефон',
       email: 'Почта',
-      message: 'Коментарии',
+      message: 'Комментарии',
       send: 'Отправить',
-      writing: 'У вас остались\nвопросы?\n\nОставьте,\nпожалуйста, свои\nконтактые данные\nи я с Вами свяжусь!'
+      writing: 'У вас возникли\nвопросы?\n\nОставьте,\nпожалуйста, свои\nконтактые данные,\nи я с Вами свяжусь!'
     },
     about: {
       helloBold: 'Привет!',
-      text: 'Меня зовут Огнева Дарья, я - профессиональный\nдизайнер-иллюстратор.\nВ 2010 году окончила Северо-Западный институт Печати\nСанкт-Петербургского университета Технологии и Дизайна по\nспециальности художник-график.\n\n Еще в 2007 году судьба привела меня в свадебную индустрию: свой\nпуть я начала со свадебных магнитов ручной работы в подарок\nгостям, а затем занялась авторскими пригласительными.\n\n И с тех пор я счастлива работать с лучшими заказчиками на свете!\n Это вы: невесты и женихи!\n\n Если у вас возникнут какие-то вопросы, а на сайте на них нет ответа-',
-      endBold: ' загляните в раздел “контакты” и свяжитесь со мной!'
+      text: 'Меня зовут Огнева Дарья, я профессиональный\nдизайнер-иллюстратор.\nВ 2010 году окончила Северо-Западный институт Печати\nСанкт-Петербургского университета Технологии и Дизайна по\nспециальности "Художник-график".\n\n Еще в 2007 году судьба привела меня в свадебную индустрию: свой\nпуть я начала со свадебных магнитов ручной работы в подарок\nгостям, а затем занялась авторскими пригласительными.\n\n И с тех пор я счастлива работать с лучшими заказчиками на свете!\n Это вы - невесты и женихи!\n\n Если у вас возникнут какие-то вопросы, а на сайте на них нет ответа,',
+      endBold: ' загляните в раздел “Контакты” и свяжитесь со мной!'
     },
     cart: {
       nothing_in_cart: 'Корзина пуста',
       total: 'Итог',
-      confirm: 'Адрес доставки',
+      confirm: 'Контактная информация',
       unit: 'шт',
-      productImage: 'Картинка товара',
+      productImage: 'Изображение товара',
       productName: 'Название товара',
       productAddOns: 'Дополнения',
       productUnitPrice: 'Стоимость за штуку',
@@ -796,7 +627,7 @@ var LanguageProvider = function LanguageProvider(props) {
       productTotal: 'Итог',
       productDelete: 'Удалить товар',
       orderTotal: 'Итог заказа ',
-      title: 'Адрес доставки',
+      title: 'Контактная информация',
       firstName: 'Имя',
       lastName: 'Фамилия',
       email: 'Почта',
@@ -805,23 +636,23 @@ var LanguageProvider = function LanguageProvider(props) {
       address2: 'Адрес 2',
       city: 'Город',
       country: 'Страна',
-      region: 'Облясть',
+      region: 'Область',
       index: 'Индекс',
-      confirmation: 'Подтверждение товара',
+      confirmation: 'Подтверждение товаров',
       submit: 'Отправить'
     },
     confirmation: {
       title: 'Информация о заказе',
       lineOne: 'Спасибо за заказ!',
-      lineTwo: 'Мы связемся с Вами чтобы подвердить способ оплаты, также как и заказ.',
+      lineTwo: 'Мы свяжемся с Вами, чтобы подтвердить заказ и способ оплаты.',
       orderNumber: 'Номер заказа'
     },
     access: {
-      access: 'У Вас нет доступ к этой странице'
+      access: 'У Вас нет доступа к этой странице'
     },
     thankYou: {
       thanks: 'Спасибо за письмо!',
-      "return": 'Мы свяжемся с Вами в течении 24 часа'
+      "return": 'Мы свяжемся с Вами в течение 24 часов'
     }
   };
   var englishLanguage = {
@@ -849,13 +680,13 @@ var LanguageProvider = function LanguageProvider(props) {
       contact: 'Contact',
       cart: 'Shopping Cart',
       thankyou: 'Thank You',
-      shipping: 'Shipping Information',
+      shipping: 'Order Review',
       confirmation: 'Order Details'
     },
     product: {
       custom_cards: 'Custom Invitations',
       prepared_cards: 'Pre-made Invitations',
-      souvenirs: 'Gifts for Guests',
+      souvenirs: 'Souviners',
       from: 'from',
       add: 'Add To Cart',
       complekt: "What's Included",
@@ -877,7 +708,7 @@ var LanguageProvider = function LanguageProvider(props) {
     cart: {
       nothing_in_cart: 'Your Cart is Empty',
       total: 'Total Price',
-      confirm: 'Shipping Address',
+      confirm: 'Contact Information',
       unit: 'unit',
       productImage: 'Product Image',
       productName: 'Product Name',
@@ -887,7 +718,7 @@ var LanguageProvider = function LanguageProvider(props) {
       productTotal: 'Total Price',
       productDelete: 'Delete Item',
       orderTotal: 'Cart Total',
-      title: 'Shipping Address',
+      title: 'Contact Information',
       firstName: 'First Name',
       lastName: 'Last Name',
       email: 'Email',
@@ -898,7 +729,7 @@ var LanguageProvider = function LanguageProvider(props) {
       country: 'Country',
       region: 'State/Province/Region',
       index: 'Postal Code',
-      confirmation: 'Order Confirmation',
+      confirmation: 'Order Review',
       submit: 'Submit'
     },
     confirmation: {
@@ -29220,9 +29051,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _components_ShippingInfo__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/ShippingInfo */ "./components/ShippingInfo.js");
-/* harmony import */ var _components_ConfirmationInfo__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/ConfirmationInfo */ "./components/ConfirmationInfo.js");
-/* harmony import */ var _contexts_CartContext__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../contexts/CartContext */ "./contexts/CartContext.js");
-/* harmony import */ var _contexts_LanguageContext__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../contexts/LanguageContext */ "./contexts/LanguageContext.js");
+/* harmony import */ var _contexts_CartContext__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../contexts/CartContext */ "./contexts/CartContext.js");
+/* harmony import */ var _contexts_LanguageContext__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../contexts/LanguageContext */ "./contexts/LanguageContext.js");
 var _jsxFileName = "C:\\Users\\roger\\OneDrive\\Desktop\\Dasha_Next\\Dasha\\pages\\shipping.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -29230,12 +29060,11 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
-
 var shipping = function shipping() {
-  var _useContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(_contexts_CartContext__WEBPACK_IMPORTED_MODULE_3__["CartContext"]),
+  var _useContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(_contexts_CartContext__WEBPACK_IMPORTED_MODULE_2__["CartContext"]),
       cart = _useContext.cart;
 
-  var _useContext2 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(_contexts_LanguageContext__WEBPACK_IMPORTED_MODULE_4__["LanguageContext"]),
+  var _useContext2 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(_contexts_LanguageContext__WEBPACK_IMPORTED_MODULE_3__["LanguageContext"]),
       currLang = _useContext2.currLang,
       language = _useContext2.language;
 
@@ -29245,13 +29074,13 @@ var shipping = function shipping() {
     className: "shipping-info",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 12
     },
     __self: this
   }, cart.length !== 0 ? __jsx(_components_ShippingInfo__WEBPACK_IMPORTED_MODULE_1__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 14
     },
     __self: this
   }) : __jsx("h1", {
@@ -29268,7 +29097,7 @@ var shipping = function shipping() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
+      lineNumber: 16
     },
     __self: this
   }, currLang ? ru.access : en.access));
@@ -29278,7 +29107,7 @@ var shipping = function shipping() {
 
 /***/ }),
 
-/***/ 5:
+/***/ 6:
 /*!*************************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fshipping&absolutePagePath=C%3A%5CUsers%5Croger%5COneDrive%5CDesktop%5CDasha_Next%5CDasha%5Cpages%5Cshipping.js ***!
   \*************************************************************************************************************************************************************/
@@ -29301,5 +29130,5 @@ module.exports = dll_e9ad7d891b372a4221cf;
 
 /***/ })
 
-},[[5,"static/runtime/webpack.js"]]]);
+},[[6,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=shipping.js.map
